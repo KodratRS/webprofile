@@ -1,0 +1,5045 @@
+<!doctype html>
+<html lang="id">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INFJ - Deep Reflections &amp; Psychoanalysis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            width: 100%;
+            background: linear-gradient(135deg, #0a1a2e 0%, #16213e 25%, #0f3a2e 50%, #1a4d3e 75%, #0a1a2e 100%);
+            background-attachment: fixed;
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #e8dfc7;
+            position: relative;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        :root {
+            --gold: #c9a961;
+            --gold-bright: #dbb873;
+            --gold-dark: #9d7e3d;
+            --cream: #e8dfc7;
+            --cream-dark: #d4c5ad;
+            --bg-deepest: #0a1a2e;
+            --bg-deep: #16213e;
+            --bg-mid: #0f3a2e;
+            --bg-accent: #1a4d3e;
+            --green-deep: #0d4d3d;
+            --green-mid: #1a6b54;
+            --green-bright: #2d8a6b;
+            --blue-deep: #16304d;
+            --blue-mid: #1e4d7a;
+            --blue-bright: #2d6a9e;
+            --teal-deep: #0f4a4a;
+            --teal-mid: #1a6666;
+        }
+
+      
+        #hero {
+            position: relative;
+        }
+
+       
+        .particles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -5;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, var(--gold-bright), transparent);
+            border-radius: 50%;
+            opacity: 0;
+            animation: floatParticle linear infinite;
+        }
+
+        @keyframes floatParticle {
+            0% {
+                transform: translateY(100%) translateX(0) scale(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.6;
+            }
+            90% {
+                opacity: 0.3;
+            }
+            100% {
+                transform: translateY(-100vh) translateX(var(--drift)) scale(1);
+                opacity: 0;
+            }
+        }
+
+       
+        .particle:nth-child(1) { left: 5%; width: 3px; height: 3px; animation-duration: 25s; animation-delay: 0s; --drift: 20px; }
+        .particle:nth-child(2) { left: 15%; width: 4px; height: 4px; animation-duration: 30s; animation-delay: 2s; --drift: -30px; }
+        .particle:nth-child(3) { left: 25%; width: 2px; height: 2px; animation-duration: 28s; animation-delay: 4s; --drift: 15px; }
+        .particle:nth-child(4) { left: 35%; width: 5px; height: 5px; animation-duration: 32s; animation-delay: 1s; --drift: -20px; }
+        .particle:nth-child(5) { left: 45%; width: 3px; height: 3px; animation-duration: 26s; animation-delay: 3s; --drift: 25px; }
+        .particle:nth-child(6) { left: 55%; width: 4px; height: 4px; animation-duration: 29s; animation-delay: 5s; --drift: -15px; }
+        .particle:nth-child(7) { left: 65%; width: 2px; height: 2px; animation-duration: 27s; animation-delay: 2s; --drift: 18px; }
+        .particle:nth-child(8) { left: 75%; width: 5px; height: 5px; animation-duration: 31s; animation-delay: 4s; --drift: -25px; }
+        .particle:nth-child(9) { left: 85%; width: 3px; height: 3px; animation-duration: 24s; animation-delay: 1s; --drift: 22px; }
+        .particle:nth-child(10) { left: 95%; width: 4px; height: 4px; animation-duration: 33s; animation-delay: 3s; --drift: -18px; }
+        .particle:nth-child(11) { left: 10%; width: 2px; height: 2px; animation-duration: 29s; animation-delay: 6s; --drift: 12px; }
+        .particle:nth-child(12) { left: 20%; width: 5px; height: 5px; animation-duration: 26s; animation-delay: 7s; --drift: -28px; }
+        .particle:nth-child(13) { left: 30%; width: 3px; height: 3px; animation-duration: 31s; animation-delay: 2s; --drift: 16px; }
+        .particle:nth-child(14) { left: 40%; width: 4px; height: 4px; animation-duration: 27s; animation-delay: 5s; --drift: -22px; }
+        .particle:nth-child(15) { left: 50%; width: 2px; height: 2px; animation-duration: 30s; animation-delay: 1s; --drift: 19px; }
+        .particle:nth-child(16) { left: 60%; width: 5px; height: 5px; animation-duration: 25s; animation-delay: 4s; --drift: -14px; }
+        .particle:nth-child(17) { left: 70%; width: 3px; height: 3px; animation-duration: 28s; animation-delay: 6s; --drift: 21px; }
+        .particle:nth-child(18) { left: 80%; width: 4px; height: 4px; animation-duration: 32s; animation-delay: 3s; --drift: -26px; }
+        .particle:nth-child(19) { left: 90%; width: 2px; height: 2px; animation-duration: 24s; animation-delay: 7s; --drift: 13px; }
+        .particle:nth-child(20) { left: 8%; width: 5px; height: 5px; animation-duration: 29s; animation-delay: 2s; --drift: -17px; }
+        .particle:nth-child(21) { left: 18%; width: 3px; height: 3px; animation-duration: 27s; animation-delay: 5s; --drift: 24px; }
+        .particle:nth-child(22) { left: 28%; width: 4px; height: 4px; animation-duration: 31s; animation-delay: 1s; --drift: -19px; }
+        .particle:nth-child(23) { left: 38%; width: 2px; height: 2px; animation-duration: 26s; animation-delay: 4s; --drift: 27px; }
+        .particle:nth-child(24) { left: 48%; width: 5px; height: 5px; animation-duration: 30s; animation-delay: 6s; --drift: -23px; }
+        .particle:nth-child(25) { left: 58%; width: 3px; height: 3px; animation-duration: 25s; animation-delay: 3s; --drift: 11px; }
+        .particle:nth-child(26) { left: 68%; width: 4px; height: 4px; animation-duration: 28s; animation-delay: 7s; --drift: -29px; }
+        .particle:nth-child(27) { left: 78%; width: 2px; height: 2px; animation-duration: 32s; animation-delay: 2s; --drift: 14px; }
+        .particle:nth-child(28) { left: 88%; width: 5px; height: 5px; animation-duration: 24s; animation-delay: 5s; --drift: -21px; }
+        .particle:nth-child(29) { left: 12%; width: 3px; height: 3px; animation-duration: 29s; animation-delay: 1s; --drift: 26px; }
+        .particle:nth-child(30) { left: 92%; width: 4px; height: 4px; animation-duration: 27s; animation-delay: 4s; --drift: -16px; }
+
+       
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 18px 20px;
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(201, 169, 97, 0.15);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 12px 20px;
+            background: rgba(10, 14, 26, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(201, 169, 97, 0.5);
+            animation: logoGlow 3s ease-in-out infinite;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            letter-spacing: 4px;
+            transform: scale(1.1);
+        }
+
+        @keyframes logoGlow {
+            0%, 100% {
+                filter: drop-shadow(0 0 10px rgba(201, 169, 97, 0.4));
+            }
+            50% {
+                filter: drop-shadow(0 0 20px rgba(201, 169, 97, 0.7));
+            }
+        }
+
+        .menu-toggle {
+            width: 32px;
+            height: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            cursor: pointer;
+            z-index: 1002;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-toggle span {
+            width: 100%;
+            height: 3px;
+            background: var(--gold-bright);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(201, 169, 97, 0.5);
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(9px, 9px);
+            background: var(--gold-bright);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(9px, -9px);
+            background: var(--gold-bright);
+        }
+        
+        .menu-toggle.active {
+            position: fixed;
+            right: 20px;
+            z-index: 1002;
+        }
+
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 85%;
+            max-width: 400px;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(10, 14, 26, 0.98), rgba(26, 58, 46, 0.98));
+            backdrop-filter: blur(40px);
+            -webkit-backdrop-filter: blur(40px);
+            padding: 100px 30px 40px;
+            transition: right 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 1001;
+            overflow-y: auto;
+            border-left: 2px solid rgba(201, 169, 97, 0.2);
+            box-shadow: -10px 0 50px rgba(0, 0, 0, 0.7);
+        }
+
+        .nav-menu.active {
+            right: 0;
+        }
+
+        .nav-menu a {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: var(--cream);
+            text-decoration: none;
+            padding: 18px 20px;
+            margin-bottom: 5px;
+            border-radius: 12px;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(201, 169, 97, 0.2), transparent);
+            transition: width 0.4s ease;
+            z-index: -1;
+        }
+
+        .nav-menu a:hover::before {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: var(--gold-bright);
+            border-left-color: var(--gold-bright);
+            padding-left: 30px;
+            transform: translateX(5px);
+        }
+
+        .menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        section {
+            min-height: 100%;
+            padding: 90px 20px 60px;
+            width: 100%;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            color: var(--gold-bright);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+            position: relative;
+            display: block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold-bright), var(--green-mid));
+            transition: width 0.6s ease;
+        }
+
+        .reveal.active .section-title::after {
+            width: 80px;
+        }
+
+        .section-subtitle {
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--cream-dark);
+            max-width: 90%;
+            margin: 0 auto;
+            font-style: italic;
+            padding: 0 15px;
+        }
+
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding-top: 550px;
+            padding-bottom: 400px;
+        }
+        
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .hero-photo-wrapper {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+
+        .photo-ring-outer {
+            position: absolute;
+            inset: -15px;
+            border: 3px solid transparent;
+            border-top-color: var(--gold-bright);
+            border-right-color: var(--gold-bright);
+            border-radius: 50%;
+            animation: rotateRing 8s linear infinite;
+        }
+
+        @keyframes rotateRing {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .photo-ring-inner {
+            position: absolute;
+            inset: -8px;
+            border: 2px solid transparent;
+            border-bottom-color: var(--gold-dark);
+            border-left-color: var(--gold-dark);
+            border-radius: 50%;
+            animation: rotateRingReverse 6s linear infinite;
+        }
+
+        @keyframes rotateRingReverse {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(-360deg); }
+        }
+
+        .hero-photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green-deep), var(--blue-deep), var(--green-mid));
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite, floatPhoto 6s ease-in-out infinite, subtlePulse 3s ease-in-out infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 110px;
+            border: 5px solid rgba(201, 169, 97, 0.3);
+            box-shadow: 
+                0 20px 60px rgba(0, 0, 0, 0.8),
+                0 0 40px rgba(201, 169, 97, 0.2),
+                inset 0 0 30px rgba(201, 169, 97, 0.1);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-photo::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1), transparent 60%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .hero-photo::after {
+            content: '';
+            position: absolute;
+            inset: -50%;
+            background: conic-gradient(from 0deg, transparent, rgba(201, 169, 97, 0.4), transparent 30%);
+            animation: rotateHalo 4s linear infinite;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .hero-photo:hover::before {
+            opacity: 1;
+        }
+
+        .hero-photo:hover::after {
+            opacity: 1;
+        }
+
+        @keyframes subtlePulse {
+            0%, 100% { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(201, 169, 97, 0.2); }
+            50% { box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), 0 0 60px rgba(201, 169, 97, 0.4); }
+        }
+
+        @keyframes rotateHalo {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes floatPhoto {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-15px) scale(1.03); }
+        }
+
+        .hero-photo:hover {
+            transform: scale(1.08) rotate(5deg);
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.9),
+                0 0 60px rgba(201, 169, 97, 0.5);
+            animation: gradientShift 8s ease infinite, floatPhoto 6s ease-in-out infinite, subtlePulse 3s ease-in-out infinite, wiggle 0.5s ease;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: scale(1.08) rotate(5deg); }
+            25% { transform: scale(1.08) rotate(7deg); }
+            75% { transform: scale(1.08) rotate(3deg); }
+        }
+
+        .hero-text {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .hero-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--gold-bright);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.1;
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.7);
+            animation: slideInLeft 1s ease;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-title {
+            font-family: 'Lora', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--gold-bright);
+            margin-bottom: 30px;
+            font-style: italic;
+            text-shadow: 0 0 20px rgba(201, 169, 97, 0.5);
+            animation: slideInRight 1s ease;
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .hero-quote {
+            font-family: 'Lora', serif;
+            font-size: 14px;
+            line-height: 1.9;
+            color: var(--cream);
+            padding: 20px;
+            background: rgba(26, 58, 46, 0.4);
+            border-left: 4px solid var(--gold-bright);
+            border-radius: 0 12px 12px 0;
+            font-style: italic;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+            animation: fadeInUp 1.5s ease;
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .hero-quote:hover {
+            background: rgba(26, 58, 46, 0.6);
+            border-left-width: 6px;
+            transform: translateX(5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-quote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 100px;
+            color: rgba(201, 169, 97, 0.1);
+            line-height: 1;
+        }
+
+        .hero-quote::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.05), transparent);
+            animation: shimmerEffect 3s ease-in-out infinite;
+        }
+
+        @keyframes shimmerEffect {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.7; }
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 20px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stat-item {
+            padding: 15px 20px;
+            background: rgba(26, 58, 46, 0.35);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            border: 1px solid rgba(201, 169, 97, 0.2);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(201, 169, 97, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold-bright), var(--green-mid));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .stat-item:hover::before {
+            opacity: 1;
+        }
+
+        .stat-item:hover::after {
+            transform: scaleX(1);
+        }
+
+        .stat-item:hover {
+            transform: translateY(-12px) scale(1.08) rotateY(5deg);
+            border-color: var(--gold-bright);
+            box-shadow: 0 20px 50px rgba(201, 169, 97, 0.4);
+        }
+
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold-bright);
+            line-height: 1;
+            text-shadow: 0 0 20px rgba(201, 169, 97, 0.4);
+        }
+
+        .stat-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--cream-dark);
+            text-transform: uppercase;
+            margin-top: 8px;
+        }
+
+        #about {
+            background: rgba(10, 14, 26, 0.3);
+        }
+
+        .about-content {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-me-card {
+            background: linear-gradient(135deg, rgba(26, 58, 46, 0.35), rgba(26, 42, 58, 0.25));
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid rgba(201, 169, 97, 0.2);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            animation: fadeInUp 1s ease;
+        }
+
+        .about-me-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(201, 169, 97, 0.08),
+                transparent 30%
+            );
+            animation: rotateBackground 15s linear infinite;
+        }
+
+        @keyframes rotateBackground {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .about-me-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(201, 169, 97, 0.4);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .about-me-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-card-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold-bright);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .about-card-title::before {
+            content: '✦';
+            font-size: 20px;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .about-text {
+            font-family: 'Lora';
+            font-size: 17px;
+            line-height: 2;
+            color: var(--cream);
+            text-align: justify;
+        }
+
+        .infj-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .infj-trait {
+            background: rgba(26, 58, 46, 0.25);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(45, 90, 71, 0.4);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: fadeInScale 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .infj-trait:nth-child(1) { animation-delay: 0.1s; }
+        .infj-trait:nth-child(2) { animation-delay: 0.2s; }
+        .infj-trait:nth-child(3) { animation-delay: 0.3s; }
+        .infj-trait:nth-child(4) { animation-delay: 0.4s; }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8) translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .infj-trait::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(201, 169, 97, 0.15), transparent);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+            transition: all 0.5s ease;
+        }
+
+        .infj-trait:hover::after {
+            transform: translate(30%, -30%) scale(1.5);
+        }
+
+        .infj-trait:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(201, 169, 97, 0.5);
+            background: rgba(26, 58, 46, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .infj-trait > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .trait-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .trait-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .trait-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--cream-dark);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .skill-card {
+            background: linear-gradient(135deg, rgba(29, 107, 84, 0.4), rgba(22, 77, 106, 0.3));
+            backdrop-filter: blur(15px);
+            padding: 45px 35px;
+            border-radius: 0;
+            border: none;
+            border-left: 6px solid var(--green-bright);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-align: left;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(45, 138, 107, 0.3));
+            transition: width 0.5s ease;
+        }
+
+        .skill-card:hover::before {
+            width: 100%;
+        }
+
+        .skill-card:active::before {
+            animation: rippleEffect 0.6s ease-out;
+        }
+
+        @keyframes rippleEffect {
+            0% {
+                width: 0;
+                opacity: 1;
+            }
+            100% {
+                width: 100%;
+                opacity: 0;
+            }
+        }
+
+        .skill-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 120px;
+            height: 120px;
+            background: radial-gradient(circle, rgba(45, 106, 158, 0.4), transparent 70%);
+            border-radius: 50%;
+            transform: translate(50%, 50%);
+            transition: all 0.5s ease;
+        }
+
+        .skill-card:hover::after {
+            transform: translate(30%, 30%) scale(1.5);
+            background: radial-gradient(circle, rgba(45, 138, 107, 0.5), transparent 70%);
+        }
+
+        .skill-card:hover {
+            transform: translateX(15px);
+            border-left-width: 12px;
+            border-left-color: var(--blue-bright);
+            box-shadow: -8px 0 30px rgba(45, 138, 107, 0.4);
+            background: linear-gradient(135deg, rgba(29, 107, 84, 0.6), rgba(22, 77, 106, 0.5));
+        }
+
+        .skill-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .skill-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--teal-mid);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .skill-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .skill-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+            color: var(--cream);
+            opacity: 0.95;
+        }
+
+        .study-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .study-card {
+            background: linear-gradient(135deg, rgba(13, 77, 61, 0.5), rgba(26, 107, 84, 0.4));
+            padding: 40px 35px;
+            border-radius: 16px;
+            border: 2px solid transparent;
+            border-top-color: var(--green-mid);
+            border-bottom-color: var(--green-deep);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .study-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(45, 138, 107, 0.15),
+                transparent 30%
+            );
+            animation: rotateSlow 20s linear infinite;
+        }
+
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .study-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent, rgba(45, 138, 107, 0.2), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .study-card:hover::after {
+            opacity: 1;
+        }
+
+        .study-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-top-color: var(--green-bright);
+            border-bottom-color: var(--green-mid);
+            background: linear-gradient(135deg, rgba(13, 77, 61, 0.7), rgba(26, 107, 84, 0.6));
+            box-shadow: 0 25px 60px rgba(45, 138, 107, 0.6);
+        }
+
+        .study-card.clicked {
+            background: linear-gradient(135deg, rgba(22, 77, 106, 0.7), rgba(30, 77, 122, 0.6));
+            border-top-color: var(--blue-bright);
+            border-bottom-color: var(--blue-mid);
+            box-shadow: 0 25px 60px rgba(45, 106, 158, 0.6);
+        }
+
+        .study-card.clicked::before {
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(45, 106, 158, 0.15),
+                transparent 30%
+            );
+        }
+
+        .study-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .study-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--green-bright);
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(45, 138, 107, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .study-card.clicked .study-label {
+            color: var(--blue-bright);
+            border-bottom-color: rgba(45, 106, 158, 0.3);
+        }
+
+        .study-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 18px;
+            line-height: 1.3;
+        }
+
+        .study-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            line-height: 1.9;
+            color: var(--cream);
+            opacity: 0.93;
+        }
+
+        .projects-grid {
+            display: grid;
+            gap: 30px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, rgba(26, 58, 46, 0.35), rgba(26, 42, 58, 0.25));
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid rgba(45, 90, 71, 0.3);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            position: relative;
+        }
+
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--gold-bright), var(--green-mid), var(--blue-bright));
+            border-radius: 16px;
+            opacity: 0;
+            z-index: -1;
+            transition: opacity 0.5s ease;
+            animation: borderRotate 3s linear infinite;
+        }
+
+        @keyframes borderRotate {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+
+        .project-card:hover::before {
+            opacity: 0.5;
+        }
+
+        .project-card:hover {
+            transform: translateY(-15px) rotateY(5deg);
+            border-color: rgba(201, 169, 97, 0.5);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, 
+                var(--green-deep), 
+                var(--blue-deep),
+                var(--green-mid)
+            );
+            background-size: 200% 200%;
+            animation: gradientMove 8s ease infinite;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                45deg,
+                transparent,
+                rgba(201, 169, 97, 0.2),
+                transparent
+            );
+            transform: translateX(-100%);
+            transition: transform 0.8s ease;
+        }
+
+        .project-card:hover .project-image::before {
+            transform: translateX(100%);
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .project-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .project-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--cream-dark);
+            margin-bottom: 20px;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .project-tag {
+            padding: 6px 16px;
+            background: rgba(26, 58, 46, 0.5);
+            border: 1px solid rgba(201, 169, 97, 0.3);
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--gold-bright);
+            transition: all 0.3s ease;
+        }
+
+        .project-tag:hover {
+            background: rgba(201, 169, 97, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .projects-secondary {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .project-small {
+            background: rgba(26, 58, 46, 0.25);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(45, 90, 71, 0.3);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-small::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at center, rgba(201, 169, 97, 0.2), transparent 70%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .project-small:hover::before {
+            opacity: 1;
+        }
+
+        .project-small:hover {
+            transform: translateY(-12px) scale(1.05) rotate(-2deg);
+            border-color: rgba(201, 169, 97, 0.6);
+            background: rgba(26, 58, 46, 0.5);
+            box-shadow: 0 20px 40px rgba(201, 169, 97, 0.3);
+        }
+
+        .project-small:active {
+            transform: translateY(-8px) scale(1.02);
+        }
+
+        .project-small-icon {
+            font-size: 36px;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .project-small-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .project-small-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--cream-dark);
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .book-card {
+            background: rgba(26, 58, 46, 0.3);
+            padding: 25px;
+            border-radius: 12px;
+            border: 2px solid rgba(45, 90, 71, 0.3);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .book-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(201, 169, 97, 0.2), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .book-card::after {
+            content: '📖';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 40px;
+            opacity: 0;
+            transform: rotate(-20deg) scale(0);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .book-card:hover::before {
+            left: 100%;
+        }
+
+        .book-card:hover::after {
+            opacity: 0.3;
+            transform: rotate(0deg) scale(1);
+        }
+
+        .book-card:hover {
+            transform: translateY(-15px) rotateY(8deg) scale(1.03);
+            border-color: rgba(201, 169, 97, 0.6);
+            box-shadow: 0 25px 60px rgba(201, 169, 97, 0.4);
+        }
+
+        .book-card:active {
+            transform: translateY(-10px) rotateY(5deg) scale(0.98);
+        }
+
+        .book-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .book-cover {
+            width: 40%;
+            height: 190px;
+            background: linear-gradient(135deg, var(--green-deep), var(--blue-accent));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(92, 96, 11, 0.5);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .book-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .book-author {
+            font-family: 'Lora', serif;
+            font-size: 15px;
+            font-style: italic;
+            color: var(--gold-bright);
+            margin-bottom: 12px;
+        }
+
+        .book-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            line-height: 1.7;
+            color: var(--cream-dark);
+        }
+
+        .hobbies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hobby-card {
+            background: linear-gradient(to right, rgba(13, 77, 61, 0.4), rgba(15, 74, 74, 0.35), rgba(22, 48, 77, 0.4));
+            padding: 35px 40px;
+            border-radius: 0;
+            border: none;
+            border-top: 3px solid var(--teal-mid);
+            border-bottom: 3px solid var(--green-mid);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .hobby-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--green-bright), var(--blue-bright));
+            transform: scaleY(0);
+            transition: transform 0.5s ease;
+        }
+
+        .hobby-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .hobby-card::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--blue-bright), var(--green-bright));
+            transform: scaleY(0);
+            transition: transform 0.5s ease;
+        }
+
+        .hobby-card:hover::after {
+            transform: scaleY(1);
+        }
+
+        .hobby-card:hover {
+            transform: scale(1.05);
+            border-top-color: var(--green-bright);
+            border-bottom-color: var(--blue-bright);
+            box-shadow: 0 15px 50px rgba(26, 107, 84, 0.4);
+            background: linear-gradient(to right, rgba(13, 77, 61, 0.6), rgba(15, 74, 74, 0.5), rgba(22, 48, 77, 0.6));
+        }
+
+        .hobby-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hobby-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: rgba(45, 138, 107, 0.3);
+            line-height: 1;
+            margin-bottom: 15px;
+            transition: all 0.4s ease;
+        }
+
+        .hobby-card:hover .hobby-number {
+            color: rgba(45, 138, 107, 0.6);
+            transform: scale(1.2) translateY(-5px);
+            text-shadow: 0 0 20px rgba(45, 138, 107, 0.6);
+        }
+
+        .hobby-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .hobby-desc {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            line-height: 1.8;
+            color: var(--cream);
+            opacity: 0.9;
+        }
+
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            animation: fadeInUp 1s ease;
+        }
+
+  
+.music-card {
+    margin-bottom: 30px; 
+ background: linear-gradient(to right, rgba(13, 77, 61, 0.4), rgba(15, 74, 74, 0.35), rgba(22, 48, 77, 0.4));
+    border: 1px solid rgba(201, 169, 97, 0.1);
+    border-radius: 12px;
+    padding: 40px;
+    min-height: 350px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7),
+                inset 0 0 10px rgba(26, 58, 46, 0.2);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.music-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--gold-bright), transparent);
+    border-radius: 5px;
+    opacity: 0.6;
+    box-shadow: 0 0 15px var(--gold-bright);
+    animation: soundPulse 4s ease-in-out infinite;
+}
+
+@keyframes soundPulse {
+    0% { transform: scaleX(0.9); opacity: 0.6; }
+    50% { transform: scaleX(1); opacity: 0.9; }
+    100% { transform: scaleX(0.9); opacity: 0.6; }
+}
+
+.music-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    border-color: var(--gold-bright);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9), 
+                0 0 30px var(--teal-mid),
+                0 0 40px rgba(201, 169, 97, 0.6);
+}
+
+.music-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(201, 169, 97, 0.1), transparent, rgba(30, 77, 122, 0.1));
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.music-card:hover::before { opacity: 1; }
+
+.music-card .playlist-title { 
+    color: var(--gold-bright);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    text-shadow: 0 0 10px rgba(201, 169, 97, 0.4);
+    margin-bottom: 8px;
+}
+
+.music-card .playlist-desc {
+    color: var(--cream-dark);
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.music-card iframe {
+    border-radius: 8px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 767px) { 
+    .music-card {
+        padding: 30px 25px;
+    }
+    .music-card .playlist-title {
+        font-size: 1.3rem;
+    }
+}
+
+
+.music-card {
+    background: linear-gradient(90deg, var(--blue-deep), var(--bg-mid) 70%);
+    border: 1px solid rgba(201, 169, 97, 0.1);
+    border-radius: 8px;
+    padding: 20px 30px; 
+    min-height: auto; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease-in-out; 
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    
+    
+    display: block; 
+}
+
+
+.music-card .content-container {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    width: 100%;
+}
+
+
+.music-card .text-wrapper {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+
+.music-card .playlist-title { 
+    color: var(--gold-bright);
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+}
+
+.music-card .playlist-desc {
+    color: var(--cream-dark);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-bottom: 10px; 
+}
+
+
+.music-card .toggle-button {
+   
+    flex-shrink: 0;
+    margin-left: auto; 
+    text-align: center;
+    border: 1px solid var(--gold-bright);
+    color: var(--gold-bright);
+    background: transparent;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    align-self: flex-start; 
+}
+
+.music-card .spotify-embed {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+    margin-top: 0;
+    width: 100%;
+}
+
+.music-card.open {
+    background: linear-gradient(135deg, var(--blue-deep), var(--bg-mid));
+    padding-bottom: 30px; 
+    display: block;
+}
+
+.music-card.open .spotify-embed {
+    max-height: 500px;
+    margin-top: 20px;
+}
+        .poems-grid {
+            display: grid;
+            gap: 35px;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .poem-card {
+            background: rgba(26, 58, 46, 0.3);
+            padding: 40px;
+            border-radius: 12px;
+            border-left: 5px solid var(--gold-bright);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            animation: breathe 4s ease-in-out infinite;
+        }
+
+        @keyframes breathe {
+            0%, 100% {
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+                transform: scale(1);
+            }
+            50% {
+                box-shadow: 0 15px 40px rgba(201, 169, 97, 0.15);
+                transform: scale(1.01);
+            }
+        }
+
+        .poem-card::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-family: 'Playfair Display', serif;
+            font-size: 150px;
+            color: rgba(201, 169, 97, 0.08);
+            line-height: 1;
+            pointer-events: none;
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .poem-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--gold-bright), var(--green-bright));
+            transition: height 0.6s ease;
+        }
+
+        .poem-card:hover::before {
+            color: rgba(201, 169, 97, 0.2);
+            transform: scale(1.2) rotate(-8deg);
+            text-shadow: 0 0 30px rgba(201, 169, 97, 0.4);
+        }
+
+        .poem-card:hover::after {
+            height: 100%;
+        }
+
+        .poem-card:hover {
+            transform: translateX(20px) scale(1.03);
+            border-left-width: 10px;
+            background: rgba(26, 58, 46, 0.5);
+            box-shadow: -15px 25px 60px rgba(201, 169, 97, 0.4);
+        }
+
+        .poem-card:active {
+            transform: translateX(15px) scale(1);
+        }
+
+        .poem-title {
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .poem-card:hover .poem-title {
+            color: var(--gold-bright);
+            transform: translateX(10px);
+            text-shadow: 0 0 20px rgba(201, 169, 97, 0.6);
+        }
+
+        .poem-text {
+            transition: all 0.4s ease;
+        }
+
+        .poem-card:hover .poem-text {
+            color: var(--cream);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            letter-spacing: 0.5px;
+        }
+
+        .poem-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .poem-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--gold-bright);
+            margin-bottom: 25px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .poem-text {
+            font-family: 'Lora', serif;
+            font-size: 17px;
+            line-height: 2.1;
+            color: var(--cream);
+            white-space: pre-line;
+            font-style: italic;
+        }
+
+        .thoughts-grid {
+            display: grid;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .thought-card {
+            background: linear-gradient(135deg, rgba(26, 42, 58, 0.4), rgba(22, 77, 106, 0.35));
+            padding: 30px 35px;
+            border-radius: 16px;
+            border: 2px solid transparent;
+            border-left: 6px solid var(--gold-bright);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            animation: reflectionGlow 6s ease-in-out infinite;
+        }
+
+        @keyframes reflectionGlow {
+            0%, 100% {
+                border-left-color: var(--gold-bright);
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                border-left-color: var(--gold-dark);
+                box-shadow: -5px 10px 40px rgba(201, 169, 97, 0.2);
+            }
+        }
+
+        .thought-card::before {
+            content: '✨';
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 30px;
+            opacity: 0;
+            transform: translateY(-10px) rotate(-20deg);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .thought-card::after {
+            content: '💭';
+            position: absolute;
+            bottom: 15px;
+            right: 20px;
+            font-size: 60px;
+            opacity: 0.08;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .thought-card:hover::before {
+            opacity: 0.6;
+            transform: translateY(0) rotate(0deg);
+        }
+
+        .thought-card:hover::after {
+            opacity: 0.2;
+            transform: scale(1.3) rotate(10deg);
+        }
+
+        .thought-card:hover {
+            transform: translateX(15px) scale(1.02);
+            border-left-width: 10px;
+            border-color: rgba(201, 169, 97, 0.3);
+            border-left-color: var(--gold-bright);
+            background: linear-gradient(135deg, rgba(26, 42, 58, 0.6), rgba(22, 77, 106, 0.5));
+            box-shadow: -10px 20px 60px rgba(201, 169, 97, 0.4);
+        }
+
+        .thought-card:active {
+            transform: translateX(10px) scale(0.98);
+        }
+
+        .thought-time {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--gold-bright);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            padding: 5px 15px;
+            background: rgba(201, 169, 97, 0.15);
+            border-radius: 20px;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .thought-card:hover .thought-time {
+            background: rgba(201, 169, 97, 0.25);
+            transform: scale(1.05);
+            letter-spacing: 4px;
+        }
+
+        .thought-text {
+            font-family: 'Lora', serif;
+            font-size: 17px;
+            line-height: 2;
+            color: var(--cream);
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease;
+        }
+
+        .thought-card:hover .thought-text {
+            color: #ffffff;
+            letter-spacing: 0.3px;
+        }
+
+        #contact {
+            background: rgba(10, 14, 26, 0.5);
+        }
+
+        .contact-content {
+            display: grid;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeInUp 1s ease;
+        }
+
+        .contact-form {
+            background: rgba(26, 58, 46, 0.3);
+            backdrop-filter: blur(20px);
+            padding: 40px;
+            border-radius: 16px;
+            border: 2px solid rgba(45, 90, 71, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .contact-form::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent,
+                rgba(201, 169, 97, 0.05),
+                transparent 30%
+            );
+            animation: rotateBackground 20s linear infinite;
+        }
+
+        .contact-form:hover {
+            border-color: rgba(201, 169, 97, 0.4);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--gold-bright);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .form-group:hover label {
+            color: var(--gold-bright);
+            letter-spacing: 2px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(10, 14, 26, 0.5);
+            border: 2px solid rgba(45, 90, 71, 0.4);
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+            color: var(--cream);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .form-group input:hover,
+        .form-group textarea:hover {
+            border-color: rgba(201, 169, 97, 0.5);
+            background: rgba(10, 14, 26, 0.6);
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold-bright);
+            box-shadow: 0 0 25px rgba(201, 169, 97, 0.4), 0 0 10px rgba(45, 138, 107, 0.2);
+            background: rgba(10, 14, 26, 0.8);
+            transform: scale(1.01);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold-bright));
+            border: none;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--bg-deepest);
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(201, 169, 97, 0.3);
+            animation: buttonGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes buttonGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(201, 169, 97, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(201, 169, 97, 0.5); }
+        }
+
+        .form-submit::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold-dark));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .form-submit::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .form-submit:hover::before {
+            opacity: 1;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(201, 169, 97, 0.6);
+        }
+
+        .form-submit:active {
+            transform: translateY(-1px) scale(0.98);
+        }
+
+        .form-submit:active::after {
+            width: 300px;
+            height: 300px;
+            opacity: 0;
+        }
+
+        .form-submit span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .success-message {
+            display: none;
+            padding: 20px;
+            background: rgba(45, 90, 71, 0.5);
+            border: 1px solid var(--gold-bright);
+            border-radius: 8px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            color: var(--gold-bright);
+            margin-top: 20px;
+            animation: slideInDown 0.5s ease;
+        }
+
+        @keyframes slideInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        .contact-links {
+            display: grid;
+            gap: 20px;
+        }
+
+        .contact-link-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+            background: rgba(26, 58, 46, 0.3);
+            border-radius: 12px;
+            border: 1px solid rgba(45, 90, 71, 0.3);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .contact-link-item:hover {
+            transform: translateX(15px);
+            border-color: rgba(201, 169, 97, 0.5);
+            background: rgba(26, 58, 46, 0.5);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--green-mid), var(--blue-accent));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            flex-shrink: 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-info h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--gold-dark);
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .contact-info p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--cream);
+        }
+
+       
+        footer {
+            padding: 40px 20px;
+            background: rgba(5, 8, 16, 0.9);
+            border-top: 1px solid rgba(201, 169, 97, 0.2);
+            text-align: center;
+        }
+
+        footer p {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            color: var(--cream-dark);
+            letter-spacing: 1px;
+        }
+
+       
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 1s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        
+        @media (min-width: 768px) {
+            .section-title {
+                font-size: 48px;
+            }
+
+            .section-subtitle {
+                font-size: 16px;
+            }
+
+            .hero-name {
+                font-size: 56px;
+            }
+
+            .hero-title {
+                font-size: 20px;
+            }
+
+            .hero-quote {
+                font-size: 16px;
+                padding: 25px;
+            }
+
+            .hero-photo-wrapper {
+                width: 280px;
+                height: 280px;
+            }
+
+            .hero-photo {
+                font-size: 110px;
+            }
+
+            .stat-item {
+                padding: 20px 30px;
+            }
+
+            .stat-number {
+                font-size: 36px;
+            }
+
+            .stat-label {
+                font-size: 11px;
+                letter-spacing: 2px;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .infj-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-secondary {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .books-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .hobbies-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr 1fr;
+                align-items: start;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .section-title {
+                font-size: 32px;
+            }
+
+            .hero-name {
+                font-size: 36px;
+            }
+
+            .hero-photo {
+                font-size: 80px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .study-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .infj-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-secondary {
+                grid-template-columns: 1fr;
+            }
+
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hobbies-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .music-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 25px;
+            }
+
+            .about-me-card {
+                padding: 25px;
+            }
+
+            .poem-card {
+                padding: 25px;
+            }
+
+            .thought-card {
+                padding: 20px 25px;
+            }
+        }
+        #about {
+    margin-top: 100px;
+}
+.nav-back-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--gold-bright);
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid rgba(201, 169, 97, 0.4);
+    border-radius: 8px;
+    background: rgba(112, 116, 24, 0.4);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.nav-back-btn:hover {
+    color: var(--cream);
+    background: rgba(201, 169, 97, 0.25);
+    transform: translateX(-3px);
+}
+
+
+.hero-name,
+.hero-title {
+    animation: mysticGlow 6s ease-in-out infinite,
+               mysticSpace 8s ease-in-out infinite;
+}
+
+
+@keyframes mysticGlow {
+    0%   { text-shadow: 0 0 0px rgba(255, 230, 180, 0.1); opacity: 0.92; }
+    50%  { text-shadow: 0 0 6px rgba(255, 230, 180, 0.25); opacity: 1; }
+    100% { text-shadow: 0 0 0px rgba(255, 230, 180, 0.1); opacity: 0.92; }
+}
+
+
+@keyframes mysticSpace {
+    0%   { letter-spacing: 0px; }
+    50%  { letter-spacing: 1px; }
+    100% { letter-spacing: 0px; }
+}
+
+
+.hero-name { animation-delay: 0.2s; }
+.hero-title { animation-delay: 0.5s; }
+.hero-quote { animation-delay: 0.8s; }
+
+
+.hero-name,
+.hero-title,
+.stat-number,
+.stat-label {
+    position: relative;
+    animation: mysticGlowText 5s ease-in-out infinite,
+               mysticDrift 10s linear infinite;
+}
+
+
+@keyframes mysticGlowText {
+    0% {
+        text-shadow: 
+            0 0 6px rgba(255, 220, 160, 0.15),
+            0 0 12px rgba(201, 169, 97, 0.1);
+    }
+    50% {
+        text-shadow: 
+            0 0 10px rgba(160, 200, 255, 0.35),
+            0 0 18px rgba(201, 169, 97, 0.25),
+            0 0 30px rgba(201, 169, 97, 0.15);
+    }
+    100% {
+        text-shadow: 
+            0 0 6px rgba(255, 220, 160, 0.15),
+            0 0 12px rgba(201, 169, 97, 0.1);
+    }
+}
+
+
+@keyframes mysticDrift {
+    0% { letter-spacing: 0px; transform: translateY(0px); }
+    50% { letter-spacing: 1.4px; transform: translateY(-1px); }
+    100% { letter-spacing: 0px; transform: translateY(0px); }
+}
+
+@media (max-width: 480px) {
+    .hero-name {
+        font-size: 28px !important;
+    }
+
+    .hero-title {
+        font-size: 16px !important;
+    }
+
+    .stat-number {
+        font-size: 24px !important;
+    }
+
+    .stat-label {
+        font-size: 12px !important;
+    }
+
+    .hero-stats {
+        gap: 15px !important;
+        flex-wrap: wrap;
+    }
+
+    .hero-stats .stat {
+        min-width: 80px;
+    }
+}
+@media (max-width: 480px) {
+    .hero-stats {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+@media (max-width: 480px) {
+    @keyframes mysticGlowText {
+        0% { text-shadow: 0 0 4px rgba(255,220,160,0.12); }
+        50% { text-shadow: 0 0 8px rgba(255,220,160,0.22); }
+        100%{ text-shadow: 0 0 4px rgba(255,220,160,0.12); }
+    }
+}
+
+@media (max-width: 480px) {
+    
+    section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .section-title {
+        margin-top: 0 !important;
+        margin-bottom: 20px !important;
+    }
+
+    .reflection-section,
+    .infj-section,
+    .poem-section,
+    .skill-section {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+    }
+
+    .reflection-item,
+    .function-card,
+    .poem-card {
+        margin-bottom: 24px !important;
+    }
+
+    .section-subtitle {
+        margin-top: -10px !important;
+    }
+}
+.project-small, .infj-trait {
+    position: relative !important;
+    z-index: 5 !important;
+    transform: none !important;
+    box-shadow: none !important; 
+}
+
+.project-small:hover, .project-small:active {
+    transform: none !important;
+    box-shadow: none !important; 
+    transition: all 0.3s ease-in-out !important;
+}
+
+.mobile-toggle-btn {
+    position: relative !important;
+    z-index: 100 !important;
+    display: block;
+    margin-top: 10px;
+    padding: 6px 15px;
+    background: rgba(201, 169, 97, 0.1);
+    border: 1px solid #c9a961;
+    color: #c9a961;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}
+
+.infj-trait:not(.is-open)>.trait-desc, .skill-card:not(.is-open)>.skill-desc, .study-card:not(.is-open)>.study-desc, .project-small:not(.is-open)>.project-small-desc, .project-small:not(.is-open)>.project-small-icon, .hobby-card:not(.is-open)>.hobby-desc, .poem-card:not(.is-open)>.poem-text {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, margin 0.5s ease-in-out;
+}
+
+.is-open .trait-desc, .is-open .skill-desc, .is-open .study-desc, .is-open .project-small-desc, .is-open .project-small-icon, .is-open .hobby-desc, .is-open .poem-text {
+    max-height: 1000px;
+    opacity: 1;
+    margin-top: 15px;
+    padding-top: initial;
+    padding-bottom: initial;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, margin 0.5s ease-in-out;
+}
+
+.is-open .book-cover {
+    max-height: 1000px !important;
+    opacity: 1 !important;
+    display: flex !important;
+    height: 100px !important;
+    width: 70px !important;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 10px;
+    transition: max-height 0.5s ease-in-out, opacity 0.3s ease-in-out, margin 0.5s ease-in-out !important;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 40px 15px !important;
+    }
+    
+    .grid-4, .grid-3, .grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    
+    .skill-card, .study-card, .project-small, .hobby-card,.poem-card, .infj-trait {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 15px 20px !important;
+        margin-bottom: 5px !important;
+        transition: all 0.4s ease-in-out !important;
+        transform: none !important;
+        box-shadow: none !important;
+    }
+    
+    .is-open {
+        padding: 25px !important;
+        background: rgba(26, 58, 46, 0.8) !important;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.5) !important;
+    }
+}
+
+.skill-card, .study-card, .project-small,  .hobby-card, .poem-card, .infj-trait, .thought-card {
+    background: rgba(10, 26, 46, 0.2) !important;
+    backdrop-filter: blur(8px); 
+    border: 1px solid rgba(201, 169, 97, 0.15) !important;
+}
+
+.is-open {
+    background: rgba(26, 58, 58, 0.4) !important; 
+}
+.reveal.active {
+    opacity: 1; 
+    transform: translateY(0); 
+}
+
+
+#chatButton{
+      position:fixed; right:22px; bottom:22px;
+      width:62px;height:62px;border-radius:50%;
+      background:var(--panel-bg);
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 8px 28px rgba(0,0,0,0.5);
+      border:1px solid var(--muted);
+      z-index:9999; cursor:pointer;
+    }
+    #chatButton img{width:40px;height:35px;display:block;opacity:0.95}
+    
+    #chatPanel{
+      position:fixed; right:22px; bottom:100px;
+      width:420px; max-width:95%;
+      height:0; opacity:0; overflow:hidden;
+      border-radius:16px;
+      background-color: #0f3a2e;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 30px 80px rgba(0,0,0,0.6);
+      transition:all .36s cubic-bezier(.2,.9,.3,1);
+      z-index:9998; display:flex;flex-direction:column;
+    }
+   
+    .chat-header {
+    padding: 14px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #173420;
+    color: var(--text);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.chat-header .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-header .title {
+    font-size: 15px;
+}
+
+.chat-actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.btn {
+    padding: 6px 10px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.btn.small {
+    padding: 6px 8px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.btn.accent {
+    background: linear-gradient(90deg, var(--accent), #d9ba75);
+    color: #08120b;
+}
+
+#chatMessages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+#chatMessages::-webkit-scrollbar {
+    display: none;
+}
+
+.msg {
+    margin-bottom: 12px;
+}
+
+.msg .q {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.msg .a {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.panel-bottom {
+    padding: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.categories {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.cat-btn {
+    padding: 8px 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    cursor: pointer;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.templates {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tpl {
+    padding: 8px 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    font-size: 13px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.more {
+    margin-top: 8px;
+    color: var(--accent);
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.22);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(0, 0, 0, 0.25);
+    color: var(--text);
+    outline: none;
+    font-size: 14px;
+}
+
+.chat-input button.send {
+    min-width: 72px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #1B4C42, #103F6E);
+    color: #fff;
+    font-weight: 700;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    background: rgba(0, 0, 0, 0.12);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 600px) {
+    #chatPanel {
+        right: 10px;
+        left: 10px;
+        width: auto;
+        border-radius: 12px;
+        bottom: 80px;
+    }
+
+    #chatButton {
+        right: 18px;
+        bottom: 18px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .chat-header .title {
+        font-size: 14px;
+    }
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+            width: 100%;
+            background: linear-gradient(135deg, #0a1a2e 0%, #16213e 25%, #0f3a2e 50%, #1a4d3e 75%, #0a1a2e 100%);
+            background-attachment: fixed;
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: #e8dfc7;
+            position: relative;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        :root {
+            --gold: #c9a961;
+            --gold-bright: #dbb873;
+            --gold-dark: #9d7e3d;
+            --cream: #e8dfc7;
+            --cream-dark: #d4c5ad;
+            --bg-deepest: #0a1a2e;
+            --bg-deep: #16213e;
+            --bg-mid: #0f3a2e;
+            --bg-accent: #1a4d3e;
+            --green-deep: #0d4d3d;
+            --green-mid: #1a6b54;
+            --green-bright: #2d8a6b;
+            --blue-deep: #16304d;
+            --blue-mid: #1e4d7a;
+            --blue-bright: #2d6a9e;
+            --teal-deep: #0f4a4a;
+            --teal-mid: #1a6666;
+        }
+
+      
+        #hero {
+            position: relative;
+        }
+
+
+       
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 18px 20px;
+            background: rgba(10, 14, 26, 0.85);
+            backdrop-filter: blur(30px);
+            -webkit-backdrop-filter: blur(30px);
+            border-bottom: 1px solid rgba(201, 169, 97, 0.15);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            padding: 12px 20px;
+            background: rgba(10, 14, 26, 0.95);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold-dark));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(201, 169, 97, 0.5);
+            animation: logoGlow 3s ease-in-out infinite;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+
+        section {
+            min-height: 100%;
+            padding: 90px 20px 60px;
+            width: 100%;
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInUp 1s ease;
+        }
+
+     
+@media (max-width: 767px) {
+    #hero {
+        padding-top: 160px !important; 
+        align-items: flex-start !important;
+        display: flex;
+        flex-direction: column;
+        height: auto !important; 
+        min-height: 100vh;
+        padding-bottom: 80px;
+    }
+
+    
+    .hero-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    
+}
+
+     
+        .infj-grid, .skills-grid, .study-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 30px;
+        }
+        .skills-grid, .study-grid, .books-grid, .hobbies-grid {
+            grid-template-columns: repeat(3, 1fr); 
+        }
+        .music-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .thoughts-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .projects-secondary {
+             grid-template-columns: repeat(3, 1fr);
+        }
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 50px;
+            align-items: center;
+            margin-top: 30px;
+        }
+    
+        @media (max-width: 1023px) {
+           
+            .skills-grid,
+            .study-grid,
+            .books-grid,
+            .hobbies-grid {
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            .music-grid,
+            .thoughts-grid,
+            .projects-secondary {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .contact-content {
+                grid-template-columns: 1fr 300px;
+                gap: 30px;
+            }
+        }
+        
+       
+        @media (max-width: 767px) {
+           
+            section {
+                padding: 70px 15px 40px; 
+            }
+            .section-header {
+                margin-bottom: 30px;
+            }
+            .section-title {
+                font-size: 30px; 
+            }
+            .section-subtitle {
+                font-size: 13px;
+                max-width: 100%;
+                padding: 0;
+            }
+            
+           
+            nav {
+                padding: 15px 15px;
+            }
+            .nav-logo {
+                font-size: 20px;
+            }
+
+           
+            #hero {
+                padding-top: 100px; 
+                padding-bottom: 80px;
+                min-height: auto; 
+            }
+
+           
+@media (max-width: 767px) {
+    
+    
+    .hero-content {
+        align-items: center !important; 
+        width: 100% !important;
+    }
+
+    
+    .hero-photo-wrapper {
+        width: 200px !important;  
+        height: 200px !important;
+        margin: 0 auto 30px auto !important; 
+    }
+
+    
+    .photo-ring-outer {
+        inset: -15px !important;  
+        border-width: 3px !important;
+    }
+   
+    .photo-ring-inner {
+        inset: -8px !important;
+        border-width: 2px !important;
+    }
+
+   
+    .hero-photo {
+        font-size: 100px !important; 
+    }
+    
+
+    #hero {
+        padding-top: 100px !important; 
+        padding-bottom: 20px !important;
+        align-items: flex-start !important; 
+        min-height: auto !important;
+    }
+}
+            .hero-photo-wrapper {
+                width: 200px; 
+                height: 130px;
+            }
+            
+            .hero-name {
+                font-size: 28px;
+            }
+            .hero-title {
+                font-size: 14px;
+            }
+            .hero-quote {
+                font-size: 13px;
+                line-height: 1.7;
+                padding: 15px;
+            }
+            
+            .stat-item {
+                flex-basis: 45%; 
+                padding: 12px 15px;
+            }
+
+           
+            .infj-grid,
+            .skills-grid,
+            .study-grid,
+            .projects-secondary,
+            .books-grid,
+            .hobbies-grid,
+            .music-grid,
+            .thoughts-grid {
+                grid-template-columns: 1fr; 
+                gap: 25px;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr; 
+                gap: 30px;
+            }
+            
+            
+            .about-me-card, .poem-card, .contact-form {
+                padding: 25px 20px;
+            }
+            
+            .skill-title, .study-title, .hobby-title {
+                font-size: 20px;
+            }
+            
+            .contact-link-item {
+                padding: 15px;
+            }
+
+            
+            .stat-item:hover, .skill-card:hover, .study-card:hover, .project-small:hover, .hobby-card:hover, .music-card:hover, .hero-photo:hover {
+                 transform: none !important; 
+                 box-shadow: none !important;
+                 border-color: rgba(201, 169, 97, 0.2) !important;
+            }
+            .form-submit:hover {
+                 transform: none; 
+                 box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            }
+        }
+        
+        
+        @media (max-width: 480px) {
+            .section-title {
+                font-size: 26px;
+            }
+            
+            .hero-name {
+                font-size: 24px;
+            }
+            
+            .hero-photo-wrapper {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .stat-item {
+                flex-basis: 100%; 
+            }
+            
+            .contact-form {
+                padding: 20px 15px;
+            }
+        }
+
+.music-card .playlist-title {
+    
+    color: #d4af37; 
+    font-size: 1.35rem; 
+    font-weight: 700;
+    margin-bottom: 5px; 
+}
+
+
+.music-card .playlist-desc {
+    color: #c0c0c0; 
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin-bottom: 20px; 
+    opacity: 0.8;
+}
+
+
+.music-card .card-content {
+    width: 100%;
+}
+
+
+@media (max-width: 767px) { 
+    
+   
+    .music-card {
+       
+        padding: 20px 20px 15px 20px; 
+        min-height: auto; 
+    }
+
+    
+    .music-card .playlist-desc {
+        font-size: 1rem; 
+        
+        margin-bottom: 10px; 
+    }
+    
+   
+    .music-grid { 
+        grid-template-columns: 1fr; 
+        gap: 15px;
+        margin-top: 20px;
+        margin-bottom: 20px; 
+    } 
+
+   
+    .music-card iframe {
+        display: block; 
+    }
+}
+#music {
+    position: relative; 
+   
+    z-index: 1000; 
+}
+
+
+.toggle-details-btn {
+    
+    background-color: transparent;
+    border: 1px solid #c9a961; 
+    color: #c9a961;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-top: 10px; 
+    margin-bottom: 5px; 
+    display: inline-block; 
+    transition: all 0.3s ease;
+    
+
+    position: relative; 
+    z-index: 1001; 
+    pointer-events: auto; 
+}
+
+.toggle-details-btn:hover {
+    background-color: #c9a961;
+    color: #1a1a1a;
+    box-shadow: 0 0 10px rgba(201, 169, 97, 0.5);
+}
+
+
+.card-toggle-content {
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    padding-top: 0;
+}
+
+.music-card.open .card-toggle-content {
+    max-height: 500px;
+    padding-top: 15px; 
+}
+@media (max-width: 767px) {
+    section {
+        padding: 80px 15px 50px; 
+    }
+
+    nav {
+        padding: 12px 15px;
+    }
+
+    .nav-logo {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    #hero {
+        padding-top: 100px;
+        padding-bottom: 60px;
+        min-height: auto;
+        align-items: center; 
+    }
+
+    .hero-photo-wrapper {
+        width: 180px !important;
+        height: 180px !important;
+        margin: 0 auto 30px auto !important;
+    }
+
+    .hero-photo {
+        font-size: 80px !important;
+    }
+
+    .hero-name {
+        font-size: 32px;
+    }
+    
+    .hero-title {
+        font-size: 15px;
+    }
+
+    .hero-quote {
+        font-size: 13px;
+        line-height: 1.7;
+        padding: 15px;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .stat-item {
+        flex: 1 1 45%; 
+        padding: 12px 15px;
+        min-width: 130px;
+    }
+    
+    .infj-grid, 
+    .skills-grid, 
+    .study-grid, 
+    .projects-secondary, 
+    .books-grid, 
+    .hobbies-grid, 
+    .music-grid, 
+    .thoughts-grid, 
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .about-me-card, .poem-card, .contact-form, .project-card, .skill-card, .study-card {
+        padding: 30px 20px;
+    }
+    
+    .about-text, 
+    .infj-trait p, 
+    .skill-desc p, 
+    .study-desc p, 
+    .project-desc, 
+    .book-desc, 
+    .hobby-desc, 
+    .music-desc, 
+    .thought-text, 
+    .poem-text {
+        font-size: 15px; 
+        line-height: 1.8;
+    }
+
+    .contact-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .contact-info p {
+        font-size: 14px;
+    }
+    
+    footer {
+        padding: 30px 20px;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+    }
+    
+    .hero-name {
+        font-size: 28px;
+    }
+
+    .hero-photo-wrapper {
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .stat-item {
+        flex: 1 1 100%; 
+    }
+    
+    .hero-stats {
+        flex-direction: column;
+    }
+    
+    .nav-menu {
+        width: 100%; 
+        max-width: none;
+    }
+}
+@media (max-width: 767px) { 
+    .music-grid {
+        gap: 15px;
+        padding: 0 15px;
+    }
+    .music-card {
+        padding: 15px 20px;
+    }
+    
+    
+    .music-card .playlist-title {
+        font-size: 1.1rem;
+    }
+    .music-card .toggle-button {
+        min-width: 120px;
+    }
+    
+   
+    .music-card iframe {
+        height: 250px; 
+        border: none;
+    }
+    
+ 
+    .music-card.open {
+        padding-bottom: 5px; 
+    }
+    
+    .music-card.open .spotify-embed {
+        margin-top: 5px; 
+    }
+}
+    </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+  <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+  <head>
+    <script defer>
+        (function() {
+            const cardSelectors = [
+                '.infj-trait', '.skill-card', '.study-card', 
+                '.project-small', '.book-card', '.hobby-card', 
+                '.music-card', '.poem-card' 
+            ];
+
+            try {
+                const allCards = document.querySelectorAll(cardSelectors.join(','));
+
+                allCards.forEach(card => {
+                    if (card.querySelector('.mobile-toggle-btn')) {
+                        return;
+                    }
+
+                    const btn = document.createElement('div');
+                    btn.className = 'mobile-toggle-btn';
+                    btn.innerText = 'Lihat Selengkapnya +';
+
+                    let targetElement = card; 
+                    const embed = card.querySelector('.spotify-embed');
+
+                    if (card.classList.contains('project-small')) {
+                        const contentArea = card.querySelector('.project-content');
+                        if (contentArea) {
+                            targetElement = contentArea;
+                        }
+                    }
+                    
+                    if (card.classList.contains('music-card') && embed) {
+                         if (!card.classList.contains('is-open')) {
+                            embed.style.display = 'none';
+                        }
+                    }
+                    
+                    targetElement.appendChild(btn); 
+
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation(); 
+                        card.classList.toggle('is-open');
+
+                        if (card.classList.contains('is-open')) {
+                            btn.innerText = 'Tutup -';
+                            btn.style.background = '#c9a961';
+                            btn.style.color = '#0a1a2e';
+                            
+                            if (card.classList.contains('music-card') && embed) {
+                                embed.style.display = 'block';
+                            }
+                        } else {
+                            btn.innerText = 'Lihat Selengkapnya +';
+                            btn.style.background = 'rgba(201, 169, 97, 0.1)';
+                            btn.style.color = '#c9a961';
+
+                            if (card.classList.contains('music-card') && embed) {
+                                embed.style.display = 'none';
+                            }
+                        }
+                    });
+                });
+            } catch (error) {
+                console.error("Script Toggle Gagal Dijalankan:", error);
+            }
+        })();
+    </script>
+</head>
+ </head>
+ <body><!-- Floating Particles -->
+  <div class="particles-container">
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+   <div class="particle"></div>
+  </div><!-- Navigation -->
+  <nav id="navbar">
+   <div class="nav-container">
+    <div class="nav-logo">
+     KRA
+    </div>
+    
+    <div class="menu-toggle" id="menuToggle"><span></span> <span></span> <span></span>
+      
+    </div>
+   </div>
+  </nav>
+  <div class="menu-overlay" id="menuOverlay"></div>
+   <div class="nav-menu" id="navMenu"> <a href="javascript:history.back()" class="nav-back-btn">← Back</a> <br>
+<a href="#hero">Home</a> <a href="#about">Who Am I</a> <a href="#skills">Skills</a> <a href="#study">Study</a> <a href="#projects">Projects</a> <a href="#books">Favorite Books</a> <a href="#hobbies">Hobbies &amp; Interests</a> <a href="#spotify">My Music</a> <a href="#poems">My Poems</a> <a href="#thoughts">2AM Thoughts</a> <a href="#contact">Contact</a>
+  </div><!-- Hero Section -->
+  <section id="hero">
+   <div class="section-container">
+    <div class="hero-content">
+     <div class="hero-photo-wrapper">
+      <div class="photo-ring-outer"></div>
+      <div class="photo-ring-inner"></div>
+      <div class="hero-photo">
+       <img  src="assets/gwehj.jpg" alt="PP" loading="lazy" >
+      </div>
+     </div>
+     <div class="hero-text">
+      <div class="hero-label">
+       INTROVERT • INTUITIVE • FEELING • JUDGING
+      </div>
+      <h1 class="hero-name" id="heroName">Kodrat Ratu Alamsyah</h1>
+      <p class="hero-title" id="heroTitle">Psychoanalysis &amp; Deep Thinker</p>
+      <div class="hero-quote" id="heroQuote">
+      "selalu mencari arti di balik sunyi, merawat nalar yang tak terlihat tapi selalu menemani, juga terus memahami bahasa tanpa diksi."
+      </div>
+      <div class="hero-stats">
+       <div class="stat-item">
+        <div class="stat-number">
+         17
+        </div>
+        <div class="stat-label">
+         Years Old
+        </div>
+       </div>
+       <div class="stat-item">
+        <div class="stat-number">
+         INFJ-T
+        </div>
+        <div class="stat-label">
+         Personality
+        </div>
+       </div>
+      
+        <div class="stat-item">
+        <div class="stat-number">
+         4W5 SX/SO
+        </div>
+      </div>
+     </div>
+    </div>
+   </div> <br>
+   
+  </section><!-- About Section -->
+  <section id="about" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      01 / WHO AM I
+     </div>
+     <h2 class="section-title">About Me</h2>
+     <p class="section-subtitle">melihat diriku dan dunia melalui ruang batin yang sunyi, tempat setiap pikiran dan rasa mengungkap dirinya perlahan.</p>
+    </div>
+    <div class="about-content">
+     <div class="about-me-card">
+      <h3 class="about-card-title">Tentang Saya</h3>
+      <p class="about-text">seorang pemuda visioner yang menjelajahi batas antara teknologi, kesadaran, dan filosofi kehidupan. Bagi saya, dunia bukan sekadar tempat untuk bertahan, tapi ruang untuk memahami makna dari setiap sistem, pola, dan tindakan manusia. Dengan dasar di bidang Teknologi dan minat mendalam pada psikologi serta prinsip eksistensial, saya berfokus menciptakan karya yang tidak hanya berfungsi, tapi juga bermakna. Saya percaya masa depan dibangun oleh mereka yang mampu berpikir sistematis sekaligus merasakan dengan empati.</p>
+     </div>
+     <div class="about-me-card">
+      <h3 class="about-card-title">INFJ Personality</h3>
+      <p class="about-text">Sebagai INFJ, aku hidup dari intuisi yang bergerak samar, empati yang menangkap gema halus, logika yang bekerja dalam diam, dan keheningan yang membuat semuanya terasa jujur</p>
+      <div class="infj-grid">
+       <div class="infj-trait">
+        <div class="trait-label">
+         DOMINANT
+        </div>
+        <h4 class="trait-title">Ni - Introverted Intuition</h4>
+        <p class="trait-desc">Melihat pola tersembunyi dan visi masa depan dengan kejelasan mendalam.</p>
+       </div>
+       <div class="infj-trait">
+        <div class="trait-label">
+         AUXILIARY
+        </div>
+        <h4 class="trait-title">Fe - Extraverted Feeling</h4>
+        <p class="trait-desc">Memahami dan merasakan emosi orang lain secara intuitif dan mendalam.</p>
+       </div>
+       <div class="infj-trait">
+        <div class="trait-label">
+         TERTIARY
+        </div>
+        <h4 class="trait-title">Ti - Introverted Thinking</h4>
+        <p class="trait-desc">Logika internal yang kuat dalam memproses kompleksitas informasi.</p>
+       </div>
+       <div class="infj-trait">
+        <div class="trait-label">
+         INFERIOR
+        </div>
+        <h4 class="trait-title">Se - Extraverted Sensing</h4>
+        <p class="trait-desc">Mengingatkan untuk tetap terhubung dengan realitas fisik dan saat ini.</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+     </section><!-- Hobbies Section -->
+  <section id="hobbies" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      02 / SKILLS
+     </div>
+     <h2 class="section-title">SKills</h2>
+     <p class="section-subtitle">Bidang-bidang yang saya eksplorasi dengan mendalam, bukan tempat validasi tapi ekspresi. apa yang saya sajikan bersifat subjektif dan belum keseluruhan.</p>
+    </div>
+    <div class="hobbies-grid">
+     <div class="hobby-card">
+      <div class="hobby-number">
+       01
+      </div>
+      <h3 class="hobby-title">Meta-Cognition</h3>
+      <p class="hobby-desc">Kesadaran atas pikiran sendiri. kemampuan untuk mengamati, mengevaluasi, dan mengarahkan proses berpikir secara sadar. menjadi fondasi refleksi dan pengendalian diri.</p>
+     </div>
+     <div class="hobby-card">
+      <div class="hobby-number">
+       02
+      </div>
+      <h3 class="hobby-title">Reflective Writing</h3>
+      <p class="hobby-desc">Menciptakan bahasa yang tak dapat disampaikan, disuarakan, maupun diekspresikan. catatan setiap eksplorasi, refleksi menjadikannya sebagai eksistensi. </p>
+     </div>
+     <div class="hobby-card">
+      <div class="hobby-number">
+       03
+      </div>
+      <h3 class="hobby-title">Leadership</h3>
+      <p class="hobby-desc">Mendominasi tanpa deklarasi, ketegasan bukan dari kekerasan melainkan perasaan. visi, misi, ambisi, dan integritas dikelilingi empati, bukan arogansi. Logika? menjadi pusatnya.</p>
+     </div>
+     <div class="hobby-card">
+      <div class="hobby-number">
+       04
+      </div>
+      <h3 class="hobby-title">Hyper-Awareness</h3>
+      <p class="hobby-desc">Kesadaran yang bergerak memiliki sensitivitas seakan tanpa batas. Detail mikro, perubahan intensitas, dinamika sosial.. semuanya terasa sebelum sempat diberi nama</p>
+     </div>
+     <div class="hobby-card">
+      <div class="hobby-number">
+       05
+      </div>
+      <h3 class="hobby-title">Public Speaking</h3>
+      <p class="hobby-desc">Bahasa menjadi pusat kehidupan, diksi menjadi pernafasan. kepercayaan diri, ekspresi, intonasi, juga makna inti dapat disampaikan kepada publik dengan jelas </p>
+     </div>
+     <div class="hobby-card">
+      <div class="hobby-number">  
+       06
+      </div>
+      <h3 class="hobby-title">Japanesse</h3>
+      <p class="hobby-desc">Bahasa jepang, memiliki nilai moral dan budaya upaya memahami kehidupan baru</p>
+     </div>
+     <div class="hobby-card">
+      <div class="hobby-number">
+       07
+      </div>
+      <h3 class="hobby-title">Informatics</h3>
+      <p class="hobby-desc">Kode bukan sebagai hanya sebagai instruksi, tapi sebagai entitas yang memiliki fungsi. juga memiliki arti bawah sesuatu yang terlihat memiliki kedalaman yang menciptakan</p>
+     </div>
+     <div class="hobby-card">
+      <div class="hobby-number">  
+       08
+      </div>
+      <h3 class="hobby-title">Shadow Integration</h3>
+      <p class="hobby-desc">Tidak menolak kegelapan, tapi menjadikannya alat kekuatan tambahan. Bayangan bukan musuh, melainkan sisi yang menjaga kesadaranmu tetap utuh disaat dunia rapuh.</p>
+     </div>
+     <div class="hobby-card">
+      <div class="hobby-number">  
+       09
+      </div>
+      <h3 class="hobby-title">Systemic & Integrative Thinking</h3>
+      <p class="hobby-desc">berfikir dengan menangkap jaringan hubungan. Setiap fenomena terbaca sebagai bagian dari struktur yang lebih besar, bukan entitas tunggal.</p>
+     </div>
+    </div>
+   </div>
+     </section><!-- Skills Section -->
+  <section id="skills" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      04 / LEARNING
+     </div>
+     <h2 class="section-title">Study</h2>
+     <p class="section-subtitle">Bidang-bidang yang saya eksplorasi dengan mendalam</p>
+    </div>
+    <div class="skills-grid">
+     <div class="skill-card">
+      <div class="skill-number">
+       BIDANG 01
+      </div>
+      <h3 class="skill-title">Psikoanalisis</h3>
+      <p class="skill-desc"> Mempelajari gagasan tentang alam bawah sadar, konflik intrapsikis, serta simbol-simbol yang muncul dalam intuisi dan perilaku sehari-hari. Menurutku, psikoanalisis bukan sekadar teori, melainkan sebuah lensa refleksi untuk meneliti kedalaman yang mengendalikan</p>
+     </div>
+     <div class="skill-card">
+    <div class="skill-number">
+       BIDANG 02
+      </div>
+      <h3 class="skill-title">Psikologi Kepribadian</h3>
+      <p class="skill-desc"> Memahami bagaimana kepribadian terbentuk, berkembang, dan memengaruhi interaksi sosial pula dengan tujuan menemukan keterhubungan antara struktur kepribadian dan ekspresi diri dalam kehidupan nyata.</p>
+     </div>
+     <div class="skill-card">
+         <div class="skill-number">
+       BIDANG 03
+      </div>
+      <h3 class="skill-title">Psikologi Kognitif</h3>
+      <p class="skill-desc"> Menaruh perhatian pada proses mental seperti persepsi, memori, dan perhatian. menjelaskan bagaimana manusia menafsirkan dunia, mengambil keputusan, dan membangun pengetahuan.</p>
+     </div>
+     
+     <div class="skill-card">
+         <div class="skill-number">
+       BIDANG 04
+      </div>
+      <h3 class="skill-title">Filosofi/Filsafat</h3>
+      <p class="skill-desc">mengajarkan cara berpikir kritis dan reflektif terhadap eksistensi, pengetahuan, dan etika. Menciptakan prosesku dalam memahami bagaimana manusia mencari arti hidup, mulai dari definisi hingga menjadi jati diri.</p>
+     </div>
+     <div class="skill-card">
+         <div class="skill-number">
+       BIDANG 05
+      </div>
+      <h3 class="skill-title">Bisnis & Investasi</h3>
+      <p class="skill-desc"> sedang di dasar-dasar bisnis dan investasi, termasuk konsep keuangan, manajemen, serta strategi investasi. membantu memahami bagaimana pasar bekerja dan bagaimana membuat keputusan finansial yang bijak.</p>
+     </div>
+    </div>
+   </div>
+
+  
+  
+  </section><!-- Projects Section -->
+  <section id="projects" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      04 / Creation
+     </div>
+     <h2 class="section-title">Projects</h2>
+     <p class="section-subtitle">Manifestasi dari eksplorasi intelektual dan kreatif yang mendalam</p>
+    </div>
+    <div class="projects-grid">
+     <div class="project-card">
+      <div class="project-image">
+       <img src="assets/Desain tanpa judul 1.png" alt="">
+      </div>
+      <div class="project-content">
+       <div class="project-number">
+        On-Progress
+       </div>
+       <h3 class="project-title" id="project1Title">Deep-Psyche Inheritance Theory : BOOK</h3>
+       <p class="project-desc" id="project1Desc">Deep Psyche Inheritance Theory (DPIT) adalah sebuah kerangka kerja psikoanalitis struktural yang menjelaskan fenomena Singularitas Kedaulatan (Sovereign Singularity). Teori ini berpusat pada individu dengan sensitivitas bawaan tertinggi yang, dihadapkan pada Inheritance Gap atau celah struktural akibat kegagalan pertahanan garis keturunan sebelumnya, dan dituntut untuk menjadi Korektor Mutlak. DPIT berdalil bahwa sensitivitas yang diturunkan bukan hanya kerentanan, melainkan Sensor Epigenetik yang memaksa Kesadaran Tingkat Tinggi untuk mengambil peran aktif dalam memperbaiki sejarah keluarga. <br>
+          Proyek ini menguraikan arsitektur internal yang unik, yang dihasilkan dari mekanisme Adaptive Overdrive. Mekanisme ini memaksa Core batin (Zhenra) untuk membangun Sistem Interdiksi Liminal (SIL) dan Gate-Core (Arzen). Entitas ini berbeda dari Shadow karena mereka adalah Sistem Fungsional yang secara sadar diciptakan untuk tujuan struktural. DPIT menawarkan peta jalan bagi mereka yang harus mengubah beban historis menjadi Blueprint Fungsional dan mencapai Kedaulatan Mutlak, memastikan bahwa lubang yang ditinggalkan oleh generasi sebelumnya tertutup secara permanen.</p>
+       <div class="project-tags"><span class="project-tag">Theory</span> <span class="project-tag">Psikoanalisis</span> <span class="project-tag">Self-Sovereignty</span>
+       </div>
+      </div>
+     </div>
+     <div class="project-card">
+      <div class="project-image">
+       <img src="assets/Desain tanpa judul.png" alt="">
+      </div>
+      <div class="project-content">
+       <div class="project-number">
+        system Model: queue
+       </div>
+       <h3 class="project-title" id="project2Title">Zenithion System : BOOK</h3>
+       <p class="project-desc" id="project2Desc">Zenithion System adalah teori kesadaran integratif yang memandang manusia sebagai satu kesatuan utuh, terdiri dari tiga domain utama, kognitif, psikis/emosional, dan biologis/fisiologis. Teori ini menolak pandangan bahwa pikiran, emosi, dan tubuh bekerja secara terpisah. Sebaliknya, Zenithion menegaskan bahwa kesadaran muncul dari sinkronisasi real-time antara aktivitas neural, proses afektif, dan respons tubuh. Dalam kerangka ini, kejernihan, fokus, intuisi, dan ketenangan bukanlah hasil dominasi salah satu domain, melainkan harmoni dari ketiganya. <br>
+       Ketika sinkronisasi tercapai, manusia memasuki Mode Zenithion, keadaan kesadaran optimal yang stabil, efisien, dan responsif. Mode ini ditandai oleh fokus tinggi namun tenang, tubuh yang selaras tanpa gelisah, serta emosi yang hidup tetapi terkendali. Zenithion memandang konflik internal sebagai desinkronisasi sistem, bukan sekadar gangguan mental. Dengan pendekatan ini, teori Zenithion membuka kemungkinan untuk memahami kesadaran secara lebih ilmiah dan operasional, sekaligus memberi ruang bagi eksplorasi potensi manusia di titik integrasi psikis-tubuh-energi laten (shadow). </p>
+       <div class="project-tags"><span class="project-tag">Theory</span> <span class="project-tag">Synchronization System</span> <span class="project-tag">Integrative Consciousness
+</span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="projects-secondary">
+     <div class="project-small"><span class="project-small-icon"><img src="assets/Cover vol 1.jpg" alt="Cover VOL 1" style="width: 125px; height: 160px;"></span>
+      <h4 class="project-small-title">ZENIC : Clash To Peace</h4>
+      <p class="project-small-desc">Karya sastra novel yang bereferensi dari kisah nyata, sebuah perbedaan dengan satu tujuan. perdamaian.</p>
+     </div>
+     <div class="project-small"><span class="project-small-icon"><img src="assets/ZD 3.png" alt="Zenithrra LOGO"  style="width: 145px; height: 160px;"></span>
+      <h4 class="project-small-title">Zenithrra Dynamics-LAB : WEB</h4>
+      <p class="project-small-desc">Platform Digital Pengenalan dan pemasaran PT Zenithrra baik jasa/ide dan produk yang berpusat pada Psiko-teknologi</p>
+     </div>
+     <div class="project-small"><span class="project-small-icon"><img src="assets/fortymHD.png" alt="FORTYM LOGO"  style="width: 165px; height: 160px;"></span>
+      <h4 class="project-small-title">Fortym Aureus : WEB</h4>
+      <p class="project-small-desc">Platform digital dari Fortym Aureus business excellent dengan desain modern dan interaktif</p>
+     </div>
+      <div class="project-small"><span class="project-small-icon">On-Progress</span>
+      <h4 class="project-small-title">Community self improvement : Digital Content</h4>
+      <p class="project-small-desc">Penyediaan ruang untuk berfikir dan berdiskusi, sekaligus tempat berekspresi dan menciptakan eksistensi</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Favorite Books Section -->
+  <section id="books" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      05 / LITERATURE
+     </div>
+     <h2 class="section-title">TOP 3 Favorite Books</h2>
+     <p class="section-subtitle">Buku-buku yang membentuk prinsip diri saya</p>
+    </div>
+    <div class="books-grid">
+     <div class="book-card">
+      <div class="book-cover">
+       <img src="assets/book 1.jpg" alt="">
+      </div>
+      <h3 class="book-title">The 48 : laws of power</h3>
+      <p class="book-author">Robert Greene</p>
+      <p class="book-desc"> The 48 Laws of Power mengingatkan bahwa kekuasaan adalah permainan bayangan, di mana memahami hukum-hukumnya berarti memahami sisi tersembunyi manusia.
+</p>
+     </div>
+     <div class="book-card">
+      <div class="book-cover">
+       <img src="assets/book2.jpg" alt="">
+      </div>
+      <h3 class="book-title">Dark Psychology</h3>
+      <p class="book-author">David Green</p>
+      <p class="book-desc"> Dark Psychology membuka pintu gelap pikiran, mengajarkan bahwa mengenali manipulasi adalah langkah pertama untuk menjaga kebebasan batin.
+</p>
+     </div>
+     <div class="book-card">
+      <div class="book-cover">
+       <img src="assets/book4.jpg" alt="" >
+      </div>
+      <h3 class="book-title">Atomic Habits</h3>
+      <p class="book-author">James Clear</p>
+      <p class="book-desc"> Atomic Habits menegaskan bahwa perubahan besar lahir dari benih kecil, dan setiap kebiasaan adalah jalan menuju jati diri yang lebih utuh.
+</p>
+     </div>
+    </div>
+   </div>
+   </section><!-- Study Section -->
+  <section id="study" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      06 / PASSIONS
+     </div>
+     <h2 class="section-title">My Hobbies & Interests</h2>
+     <p class="section-subtitle">Aktivitas yang membawa saya lebih dekat pada pemahaman diri dan dunia</p>
+    </div>
+    <div class="study-grid">
+     <div class="study-card">
+      <div class="study-label">
+       HOBBIE 01
+      </div>
+      <h3 class="study-title">Deep Reading</h3>
+      <p class="study-desc">membaca buku psikologi, filosofi, literatur, bisnis, dan self improvement dengan analisis mendalam dan refleksi kritis.</p>
+     </div>
+     <div class="study-card">
+      <div class="study-label">
+        HOBBIE 02
+      </div>
+      <h3 class="study-title">Journaling</h3>
+      <p class="study-desc">Menulis refleksi harian, menganalisis emosi, dan mendokumentasikan perjalanan introspektif.</p>
+     </div>
+     <div class="study-card">
+      <div class="study-label">
+       HOBBIE 03
+      </div>
+      <h3 class="study-title">Music Therapy and singing</h3>
+      <p class="study-desc">Mengeksplorasi musik sebagai medium untuk memahami dan memproses emosi kompleks, Dan bernyanyi mengungkapkan emosi.</p>
+     </div>
+    <div class="study-card">
+      <div class="study-label">
+       HOBBIE 04
+      </div>
+      <h3 class="study-title">Playing Games</h3>
+      <p class="study-desc">Mulai dari game kompetitif hingga puzzle, meningkatkan produktivitas dan juga melatih kapasitas</p>
+     </div>
+     <div class="study-card">
+      <div class="study-label">
+       HOBBIE 05
+      </div>
+      <h3 class="study-title">Reflection and Insight Exploration</h3>
+      <p class="study-desc">Waktu berhenti.. Merenung, Melihat dan Merasakan segalanya, Sekaligus menemukan lalu menciptakan sesuatu yang baru didunia, diriku.</p>
+     </div>
+    </div>
+   </div>
+ 
+  </section><!-- Spotify Section -->
+  <section id="spotify" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      07 / SOUNDTRACK
+     </div>
+     <h2 class="section-title">My Favorite Music</h2>
+     <p class="section-subtitle">4 genre yang menemani setiap momen dan mood saya</p>
+    </div>
+ <section id="music" class="spotify-section reveal">
+    <div class="section-container"> 
+            <div class="music-card">
+            <h4 class="playlist-title">Japanesse PLAYLIST</h4>
+            <button class="toggle-details-btn">Lihat Selengkapnya</button> 
+            <div class="card-toggle-content">
+            <p class="playlist-desc">Mode Nijon Jin</p>
+                <div class="card-content">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0qU3BLfzeaoQlnHSyue3wT?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+            </div>
+            </div>
+            
+            <div class="music-card">
+                <h4 class="playlist-title">Netral PLAYLIST</h4> 
+                <button class="toggle-details-btn">Lihat Selengkapnya</button> 
+            <div class="card-toggle-content">
+            <p class="playlist-desc">Universal mood</p>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/09cnhVx5q7sSRgxyO7G8Mr?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                </div>
+            <div class="music-card">
+                <h4 class="playlist-title">Funk PLAYLIST</h4>
+                <button class="toggle-details-btn">Lihat Selengkapnya</button> 
+            <div class="card-toggle-content">
+            <p class="playlist-desc">Mode Adrenalin </p>
+                <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0r0guBeoakKAVZtJLJG13q?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                </div>
+            <div class="music-card">
+                <h4 class="playlist-title">Reflection PLAYLIST</h4>
+                   <button class="toggle-details-btn">Lihat Selengkapnya</button> 
+            <div class="card-toggle-content">
+            <p class="playlist-desc">Mode Bengong</p>
+                 <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2NYh4bHd2HCyGY4FuNk5vM?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                </div>
+        </div>
+    
+</section>
+  </section><!-- Poems Section -->
+  <section id="poems" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      08 / POETRY
+     </div>
+     <h2 class="section-title">Best Poems</h2>
+     <p class="section-subtitle">Ekspresi puitis dari kedalaman, kesepian, dan pencarian makna. *hanya beberapa</p>
+    </div>
+    <div class="poems-grid">
+     <div class="poem-card">
+      <h3 class="poem-title" id="poem1Title">Retakan Waktu</h3>
+      <p class="poem-text" id="poem1Text">
+        di antara retakan waktu yang tak ingin sembuh, kutemukan jejakmu.. 
+        bukan di bumi, 
+        bukan di surga,
+        tapi di dimensi semesta yang tak nyata.
+        
+        dia.. bukan nama, bukan wajah, bukan tempat.
+        dia adalah angan dari puisi yang belum sempat kutulis, yang hanya terbaca saat aku tak bisa hidup dalam realita. 
+        dan aku ingin bicara, tapi bahasaku terlalu waras untuk rasa.
+        maka kubiarkan dadaku menjadi pelukis, menggores warna yang hanya bisa dibaca oleh mereka yang hidup.  
+        
+        aku mencintaimu...
+        bukan sebagai tubuh, bukan sebagai manusia,
+        tapi sebagai bagian dari diriku yang hilang,
+        yang hanya berani muncul... disaat aku lelah mencari.</p>
+     </div>
+     <div class="poem-card">
+      <h3 class="poem-title">Puncak Dikara</h3>
+      <p class="poem-text">
+        Puncak dikara, ditemani arunika yang tiada tara,
+        Sejuk udara memeluk diriku yang hangat merasakan sesuatu,
+ 
+        Tak disengaja angin membawaku kepadamu,
+        ntah kenapa aku merasakan sesuatu yang berbeda,
+        suasana menjadi panas, udara pun terasa sesak, apa yang terjadi?
+    
+        aku melihat nayanika mu disertai paras yang anindya,
+        tapi sayangnya kita bertemu dengan rasa yang anatya.
+        Kupikir ini semua kegilaan diriku, tapi nyatanya senandikaku berbicara,
+        "itu adalah perasaanmu" ungkapnya.
+    
+        Diantara ketenangan dan kesepian kau datang dengan senyum yang membawa harsa,
+        hatiku yang beku menjadi hangat, daksaku yang panas menjadi sejuk, aku.. merasakan asmaraloka yang menggebu.
+    
+        tak terasa nika menjadi sendyakala,
+        kita berdua saling bersandar, diantara bukit yang dikara, kita melihat bianglala yang sangat berwarna bagai perasaan kita.
+    
+        Kita pun berteman, yang tak biasa yaitu menjadi jatukrama.. sayangku.
+    </p>
+     </div>
+     <div class="poem-card">
+      <h3 class="poem-title">Perpisahan Tanpa Lisan</h3>
+      <p class="poem-text">Aku tidak berhenti,
+      hanya memilih menepi, 
+      di batas yang diam-diam kau ciptakan,
+      tanpa salam perpisahan,
+      tanpa tanda untuk tinggal,
+      semua terjadi begitu saja.
+    
+      Aku masih menunggu, bukan karena berharap.
+      melainkan karena belum benar-benar mampu melepaskan.
+    
+      Tak ada kata sayang,
+      tak juga kemarahan.
+      Hanya sisa niat yang tak sempat menjadi arah.
+    
+      Perhatian ini bukan tuntutan,
+      dan keinginan menjaga bukanlah hasrat memiliki,
+      Namun bahkan itu pun kadang disalahartikan
+      sebagai niat yang tak pernah kupikirkan.
+    
+      Engkau tetap dirimu,
+      aku pun tak berubah.
+      Hanya saja, barangkali waktu tak selalu bisa berjalan sejajar,
+      meski sempat terbayang demikian.
+    
+      Maka jika kelak kau merasa aku telah menghilang,
+      percayalah.. 
+      bukan aku yang pergi,
+      melainkan engkau yang tak lagi menoleh ke arahku.</p>
+     </div>
+      <div class="poem-card">
+      <h3 class="poem-title">Binasa karna Buana</h3>
+      <p class="poem-text">
+        Buana yang kejam, menusuk diriku dari segala arah, tanpa belas kasih.
+Kesehatan, perasaan, dan pikiran menjadi tersiksa depresi.
+membuatku terambang di antara kebinasaan,
+Tak ada tempat pulang untuk memberi kekuatan,
+hanya diriku sendiri yang dapat menjalankan semua rintangan penuh kepedihan.
+
+Waktu berjalan seperti bayangan yang hilang arah,
+setiap detik melukai, setiap menit menipu rasa lega.
+Aku menatap langit tanpa warna,
+namun warna itu kembali di mataku sebagai luka yang tak terlihat.
+
+Orang-orang bicara, suaranya menjadi gema yang tak kumengerti,
+mereka tertawa, menangis, berdoa,
+tapi aku hanya berdiri tanpa tahu aku siapa di mata mereka.
+Ada cahaya yang datang,
+namun cahaya itu menusuk, bukan menghangatkan.
+Ada tangan yang meraih,
+namun jaraknya seperti ilusi.
+
+Aku tertawa di dalam diriku sendiri,
+bukan bahagia, bukan pula gila,
+hanya sekadar menjaga sisa jiwa
+yang hampir tiada.
+
+Buana yang kejam ini mungkin bukan musuhku,
+mungkin aku sendiri yang terlalu merasa,
+mungkin semua ini hanyalah fatamorgana,
+yang telah di tulis tuhan semesta.
+    </p>
+     </div>
+      <div class="poem-card">
+      <h3 class="poem-title">Keterasingan</h3>
+      <p class="poem-text">
+        sebulan tlah usai, hari dimana ku anggap Semua telah Selesai..
+Sekarang yang bisa kulakukan hanya melambai,
+dan menanti kembali?
+Aku tak mengerti.
+
+ntah kenapa namamu menjadi mengerikan bagaikan iblis dalam atma.
+Telingaku tuli bila mendengar nama mu,
+Mataku buta Saat melihatmu,
+hatiku terbeku..
+usai diriku tertancap gendawamu.
+
+Ahh.. hatiku Sudah mulai temaram
+kuharap kau kembali Sebelum perasaanku menghilang..
+tapi.. kenapa Sangat sulit?
+
+Aku tidak mengerti denganmu, begitu pula dengan diriku...
+Pikiranku terundung Setiap saat,
+Wasana ku telah tersesat, Oh kawan maafkan..
+Aku tidak bisa mengendalikan
+
+Pertarungan hebat antara pikiran dengan Senandika
+Saujana Sudah gelap gulita, aku Sudah berubah..
+    </p>
+     </div>
+      <div class="poem-card">
+      <h3 class="poem-title">Siapa Peduli?</h3>
+      <p class="poem-text">
+       Fana terbutakan amerta,
+Langit redup tak dikara.
+Nika diselimuti kepedihan,
+Buana pun bersedih akan kesaksian,
+rinai tangisan mulai membasahi bentala.
+
+Tak ada satupun di dunia yang dapat memahmi perasaanku,
+Tak ada satupun yang dapat menandingi kepedihanku,
+Keluarga, Pasangan, Kawan, hilang tanpa harapan.
+
+Atma yang gila,
+Asa yang sirna,
+semuanya telah tiada.
+kuburan bernisankan angan.
+    </p>
+     </div>
+    </div>
+   </div>
+  </section><!-- 2AM Thoughts Section -->
+  <section id="thoughts" class="reveal" </section>
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      09 / REFLECTIONS
+     </div>
+     <h2 class="section-title">Random Myself at 2AM</h2>
+     <p class="section-subtitle"> *hanya beberapa dari gambaran, bukan catatan bijak/motivasi, diriku yang menentukan</p>
+    </div>
+    <div class="thoughts-grid">
+     <div class="thought-card">
+      <div class="thought-time">
+       02:15 AM
+      </div>
+      <p class="thought-text">"Aku bergerak sesuai keadaan, aku berfikir apa yang perlu kujalankan, dan aku merasakan apa yang aku derita. tapi kenapa aku tidak bergerak, berfikir dan merasakan bahwa siapa yang melakukan itu semua? "</p>
+     </div>
+     <div class="thought-card" >
+      <div class="thought-time">
+       02:47 AM
+      </div>
+      <p class="thought-text">"Jung sudah gila! apa-apaan semua kedalaman berawal dari mimpi? ah tapi aku suka, karna aku suka tertidur"</p>
+     </div>
+     <div class="thought-card">
+      <div class="thought-time">
+       03:23 AM
+      </div>
+      <p class="thought-text">"Kenapa ya.. selama ini aku melihat, seringkali mereka memikirkan dirinya saja.. apa perlu aku juga? ah tidak, jika semua manusia demikian, bumi akan hancur saat itu juga."</p>
+     </div>
+     <div class="thought-card">
+      <div class="thought-time">
+       02:58 AM
+      </div>
+      <p class="thought-text">" ..INI.. INI.. apaann.. hal sekecil dan seremeh itu mengubahku? mengendalikanku? kk'ekk.. ternyata apa yang tlah kulalui seberharga itu.. "</p>
+     </div>
+     <div class="thought-card">
+      <div class="thought-time">
+       03:41 AM
+      </div>
+      <p class="thought-text">"stoik menjadi nihil, nihil hampa terasa absurd, absurd terlalu kompleks. eksistensi ya? kini apa yang aku sebutkan bisa kulakukan semua. terserah aku, eksistensialisme."</p>
+     </div>
+    </div>
+   </div>
+  </section><!-- Contact Section -->
+  <section id="contact" class="reveal">
+   <div class="section-container">
+    <div class="section-header">
+     <div class="section-number">
+      10 / CONNECT
+     </div>
+     <h2 class="section-title">Let's Connect</h2>
+     <p class="section-subtitle">Reach out untuk diskusi mendalam atau kolaborasi yang bermakna</p>
+    </div>
+    <div class="contact-content">
+     <div class="contact-form">
+      <form id="contactForm">
+       <div class="form-group"><label for="name">Your Name</label> <input type="text" id="name" name="name" required>
+       </div>
+       <div class="form-group"><label for="email">Email Address</label> <input type="email" id="email" name="email" required>
+       </div>
+       <div class="form-group"><label for="message">Message</label> <textarea id="message" name="message" required></textarea>
+       </div><button type="submit" class="form-submit"> <span>Send Message</span> </button>
+      </form>
+      <div class="success-message" id="successMessage">
+       ✨ Message sent successfully! I'll get back to you soon.
+      </div>
+     </div>
+     <div class="contact-links">
+      <div class="contact-link-item">
+       <div class="contact-icon">
+        📧
+       </div>
+       <div class="contact-info">
+        <h4>Email</h4>
+        <p id="emailText">kodratra@gmail.com</p>
+       </div>
+      </div>
+      <div class="contact-link-item">
+       <div class="contact-icon">
+        📱
+       </div>
+       <div class="contact-info">
+        <h4>Instagram</h4>
+        <p id="instagramText">@a.lamzsy_</p>
+       </div>
+      </div>
+      <div class="contact-link-item">
+       <div class="contact-icon">
+        🎵
+       </div>
+       <div class="contact-info">
+        <h4>TikTok</h4>
+        <p id="tiktokText">@Lamzsy_</p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </section><!-- Footer -->
+  <footer>
+   <p>© 2024 INFJ Deep Reflections. Crafted with depth, intentionality, and midnight contemplation.</p>
+  </footer>
+  <div id="chatButton" title="Buka Chat">
+    <img id="botIcon" src="assets/boticon.png" style="width: 55px; height: 50px;">
+  </div>
+
+  <!-- CHAT PANEL -->
+  <div id="chatPanel" aria-hidden="true">
+    <div class="chat-header" id="panelHeader">
+      <div class="left">
+        <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center">
+          <img id="miniIcon" src="" alt="" style="width:20px;height:20px;opacity:0.9">
+        </div>
+        <div style="display:flex;flex-direction:column">
+          <div class="title">Akooo! - Virtual Assistant</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.6)">Tanya tentang Alamsyah</div>
+        </div>
+      </div>
+
+      <div class="chat-actions">
+        <button id="backBtn" class="btn small" style="display:none">Kembali</button>
+        <button id="researchBtn" class="btn small" style="display:none">Riset</button>
+        <button id="closeBtn" class="btn small">×</button>
+      </div>
+    </div>
+
+    <!-- dynamic area: when in main menu shows categories; when in category shows templates -->
+    <div id="chatMessages" role="log" aria-live="polite"></div>
+
+    <!-- PRESET AREA -->
+    <div class="panel-bottom" id="panelBottom">
+      <div id="menuArea">
+        <div style="font-size:13px;color:rgba(255,255,255,0.8);margin-bottom:8px">Pilih kategori</div>
+        <div class="categories" id="categoriesList">
+          <!-- filled by JS -->
+        </div>
+      </div>
+
+      <div id="templatesArea" style="display:none">
+        <div class="category-header">
+          <div id="categoryTitle" style="font-weight:700"></div>
+          <div style="display:flex;gap:8px">
+            <button id="toMainBtn" class="btn small">Menu Utama</button>
+            <button id="viewMoreBtn" class="btn small" style="display:none">Lihat lebih banyak</button>
+          </div>
+        </div>
+        <div class="templates" id="templatesList" style="padding-top:8px"></div>
+      </div>
+    </div>
+
+    <!-- INPUT -->
+    <div class="chat-input">
+      <input id="chatInput" placeholder="Tanyakan sesuatu atau pilih template..." autocomplete="off" />
+      <button class="send" id="sendBtn">Send</button>
+    </div>
+  </div>
+
+  <script>
+       
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        });
+
+        menuOverlay.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+            });
+        });
+
+      
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+    
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        
+        const reveals = document.querySelectorAll('.reveal');
+
+        function revealOnScroll() {
+            reveals.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial check
+
+       
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const particles = document.querySelector('.particles-container');
+            
+            if (heroContent && scrolled < 800) {
+                heroContent.style.transform = `translateY(${scrolled * 0.3}px)`;
+                
+            }
+            
+            if (particles) {
+                particles.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+
+       
+        document.querySelectorAll('.study-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove clicked class from all cards
+                document.querySelectorAll('.study-card').forEach(c => c.classList.remove('clicked'));
+                // Add clicked class to this card
+                this.classList.add('clicked');
+                
+                // Add animation effect
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });
+
+      
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Show success message
+            successMessage.classList.add('show');
+
+            // Reset form
+            contactForm.reset();
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 5000);
+        });
+
+        
+        const defaultConfig = {
+            hero_name: "Kodrat Ratu Alamsyah",
+            hero_title: "Psikoanalisis & Deep Thinker",
+            hero_quote: "Dalam kedalaman jiwa, kita menemukan kebenaran yang tak terucapkan. Setiap lapisan kesadaran membawa kita lebih dekat pada esensi sejati diri.",
+            about_me_text: "Saya adalah seseorang yang terobsesi dengan memahami kedalaman psikologi manusia. Sebagai seorang INFJ berusia 17 tahun, saya menemukan kenyamanan dalam introversion yang memungkinkan saya untuk berefleksi dan menganalisis dunia dengan cara yang unik. Psikoanalisis bukan hanya minat, tetapi cara saya memahami realitas — dari dinamika bawah sadar hingga mekanisme pertahanan yang membentuk perilaku kita.",
+            project_1_title: "Analisis Psikodinamika Remaja Digital",
+            project_1_desc: "Penelitian mendalam tentang dinamika psikologis Generasi Z dalam konteks digital. Mengeksplorasi bagaimana media sosial membentuk identity formation, attachment patterns, dan defense mechanisms.",
+            project_2_title: "Koleksi Puisi: Kedalaman yang Tersembunyi",
+            project_2_desc: "Kumpulan puisi personal yang mengeksplorasi tema eksistensial, melankolia, dan pencarian makna. Setiap puisi adalah refleksi mendalam tentang pengalaman sebagai INFJ.",
+            poem_1_title: "Kedalaman yang Sunyi",
+            poem_1_text: "Di dalam sunyi, aku mendengar\nBisikan jiwa yang tak terdengar\nLautan pikiran yang dalam\nMenyimpan rahasia yang tak terbatas\n\nIntrovert bukan berarti lemah\nMelainkan kekuatan yang tersembunyi\nDalam keheningan, aku menemukan\nKedamaian yang dunia tak mengerti",
+            email_text: "your.email@example.com",
+            instagram_text: "@yourusername",
+            tiktok_text: "@yourusername"
+        };
+
+        async function onConfigChange(config) {
+            document.getElementById('heroName').textContent = config.hero_name || defaultConfig.hero_name;
+            document.getElementById('heroTitle').textContent = config.hero_title || defaultConfig.hero_title;
+            document.getElementById('heroQuote').textContent = config.hero_quote || defaultConfig.hero_quote;
+            document.getElementById('aboutMeText').textContent = config.about_me_text || defaultConfig.about_me_text;
+            document.getElementById('project1Title').textContent = config.project_1_title || defaultConfig.project_1_title;
+            document.getElementById('project1Desc').textContent = config.project_1_desc || defaultConfig.project_1_desc;
+            document.getElementById('project2Title').textContent = config.project_2_title || defaultConfig.project_2_title;
+            document.getElementById('project2Desc').textContent = config.project_2_desc || defaultConfig.project_2_desc;
+            document.getElementById('poem1Title').textContent = config.poem_1_title || defaultConfig.poem_1_title;
+            document.getElementById('poem1Text').textContent = config.poem_1_text || defaultConfig.poem_1_text;
+            document.getElementById('emailText').textContent = config.email_text || defaultConfig.email_text;
+            document.getElementById('instagramText').textContent = config.instagram_text || defaultConfig.instagram_text;
+            document.getElementById('tiktokText').textContent = config.tiktok_text || defaultConfig.tiktok_text;
+        }
+
+        function mapToCapabilities() {
+            return {
+                recolorables: [],
+                borderables: [],
+                fontEditable: undefined,
+                fontSizeable: undefined
+            };
+        }
+
+        function mapToEditPanelValues(config) {
+            return new Map([
+                ["hero_name", config.hero_name || defaultConfig.hero_name],
+                ["hero_title", config.hero_title || defaultConfig.hero_title],
+                ["hero_quote", config.hero_quote || defaultConfig.hero_quote],
+                ["about_me_text", config.about_me_text || defaultConfig.about_me_text],
+                ["project_1_title", config.project_1_title || defaultConfig.project_1_title],
+                ["project_1_desc", config.project_1_desc || defaultConfig.project_1_desc],
+                ["project_2_title", config.project_2_title || defaultConfig.project_2_title],
+                ["project_2_desc", config.project_2_desc || defaultConfig.project_2_desc],
+                ["poem_1_title", config.poem_1_title || defaultConfig.poem_1_title],
+                ["poem_1_text", config.poem_1_text || defaultConfig.poem_1_text],
+                ["email_text", config.email_text || defaultConfig.email_text],
+                ["instagram_text", config.instagram_text || defaultConfig.instagram_text],
+                ["tiktok_text", config.tiktok_text || defaultConfig.tiktok_text]
+            ]);
+        }
+
+        if (window.elementSdk) {
+            window.elementSdk.init({
+                defaultConfig,
+                onConfigChange,
+                mapToCapabilities,
+                mapToEditPanelValues
+            });
+        }
+    </script>
+    <script>
+
+(function() {
+    
+    // Selektor Card yang Diminta (Hanya akan memproses card ini)
+    const cardSelectors = [
+        '.infj-trait', '.skill-card', '.study-card', 
+        '.project-small', '.hobby-card', 
+         '.poem-card' 
+    ];
+
+    try {
+        const allCards = document.querySelectorAll(cardSelectors.join(','));
+
+        allCards.forEach(card => {
+            // Pencegahan duplikasi tombol
+            if (card.querySelector('.mobile-toggle-btn')) {
+                return;
+            }
+
+            
+            const btn = document.createElement('div');
+            btn.className = 'mobile-toggle-btn';
+            btn.innerText = 'Lihat Selengkapnya +';
+
+            
+            const contentArea = card.querySelector('.project-content'); 
+            if (contentArea) {
+                
+                contentArea.appendChild(btn); 
+            } else {
+                
+                card.appendChild(btn); 
+            }
+
+          
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Blok event agar tidak mengganggu script lain
+                
+                card.classList.toggle('is-open');
+
+                
+                if (card.classList.contains('is-open')) {
+                    btn.innerText = 'Tutup -';
+                    btn.style.background = '#c9a961';
+                    btn.style.color = '#0a1a2e';
+                } else {
+                    btn.innerText = 'Lihat Selengkapnya +';
+                    btn.style.background = 'rgba(201, 169, 97, 0.1)';
+                    btn.style.color = '#c9a961';
+                }
+            });
+        });
+    } catch (error) {
+        console.error("Script Toggle Gagal Dijalankan:", error);
+    }
+})();
+const profileData = {
+  personal: {
+    sekolah: "SMK Wirabuana 2",
+    jurusan: "RPL",
+    anak_ke: "2 dari 3 bersaudara",
+    tempat_tanggal_lahir: "Bogor, 15 September",
+    tinggal: "Jakarta",
+    filosofi: "Eksistensialisme, aku percaya tiap orang bertanggung jawab mencari makna"
+  },
+  preferences: {
+    genre_musik: ["Pop", "Funk"],
+    olahraga: "Taekwondo",
+    hewan_favorit: "kucing",
+    games: ["MCGG", "COC", "game puzzle lainnya"],
+    artis: ["Melly Goeslaw", "Alexander Rybak"],
+    band: ["back number", "Muse", "Radiohead"],
+    makanan_favorit: "mie ayam",
+    minuman_favorit: "Americano",
+    warna_favorit: "navy",
+    musim_favorit: ["Gugur", "Semi"]
+  },
+  interests: ["Politik", "Astronomi", "Religi"],
+  psychology: {
+    reason: "Aku ingin mengenali diri sendiri dan memahami manusia lebih dalam",
+    areas: ["Psikoanalisis", "Kepribadian", "Kognitif", "Neurologis"]
+  },
+  keywords: ["Shadow", "Zenith"]
+};
+
+const qaMap = {
+  // Personal
+  "Di sekolah mana kamu belajar?": `Aku saat ini menempuh pendidikan di ${profileData.personal.sekolah}.`,
+  "Jurusan apa yang kamu ambil di sekolah?": `Aku mengambil jurusan ${profileData.personal.jurusan} (Rekayasa Perangkat Lunak).`,
+  "Kamu anak keberapa?": `Aku adalah anak ke-${profileData.personal.anak_ke}.`,
+  "Kamu tinggal di mana sekarang?": `Untuk saat ini, aku berdomisili di ${profileData.personal.tinggal}.`,
+  "Kapan dan dimana kamu lahir?": `Aku lahir di ${profileData.personal.tempat_tanggal_lahir}.`,
+
+  // Hobi
+  "Olahraga apa yang kamu tekuni?": `Olahraga utama yang aku tekuni adalah ${profileData.preferences.olahraga}.`,
+  "Genre musik favoritmu apa?": `Aku sangat menikmati musik dengan genre ${profileData.preferences.genre_musik.join(" dan ")}.`,
+  "Hewan peliharaan yang kamu suka?": `Aku pecinta hewan, khususnya ${profileData.preferences.hewan_favorit}.`,
+  "Game apa yang kamu mainkan?": `Biasanya aku mengisi waktu luang dengan main ${profileData.preferences.games.join(", ")}.`,
+  "Siapa artis favoritmu?": `Beberapa artis favoritku adalah ${profileData.preferences.artis.join(" dan ")}.`,
+
+  // Interest
+  "Topik apa saja yang kamu minati?": `Secara umum, aku tertarik mendalami topik ${profileData.interests.join(", ")}.`,
+  "Kenapa tertarik dengan astronomi?": "Astronomi yang luas menjadikan aku bisa berfikir tanpa batas dan memahami kompleksitas.",
+  "Apa pandanganmu soal politik secara umum?": "Bagiku, politik menarik karena menyangkut dinamika pengendalian, perencanaan, dan kekuasaan lalu dampaknya ke manusia lainnya.",
+  "Suka bahas religi juga?": "Ya, aku membahas religi terlapas dari agama apapun, aku bisa melihat lebih banyak sudut pandang walaupun manusia berbeda beda",
+ 
+  // Psikologi
+  "Kenapa kamu tertarik pada psikologi?": profileData.psychology.reason,
+  "Apa fokus utama penelitian psikologimu?": `Fokus risetku mencakup: ${profileData.psychology.areas.join(", ")}.`,
+  "Apa itu psikoanalisis menurutmu?": "Psikoanalisis adalah pendekatan untuk memahami alam bawah sadar (unconscious) yang memengaruhi perilaku kita.",
+  "Apa yang dimaksud dengan kepribadian dalam konteksmu?": "Kepribadian adalah pola unik pikiran, perasaan, dan perilaku yang membedakan satu individu dengan yang lain.",
+  "Bagaimana perspektif kognitif menjelaskan perilaku?": "Perspektif kognitif melihat bahwa cara manusia memproses informasi (berpikir) adalah kunci utama di balik tindakan mereka.",
+
+  // Filosofi
+  "Apa filosofi hidupmu?": profileData.personal.filosofi,
+  "Bagaimana eksistensialisme mempengaruhi cara berpikirmu?": "Eksistensialisme mengajarkanku bahwa tidak ada takdir yang baku, kita sendiri yang menciptakan makna hidup lewat pilihan bebas dan ada tanggungjawab atas pilihan",
+  "Pernah membaca filsuf tertentu?": "Secara spesifik belum, namun aku meneliti banyak karya terutama dari franz Kafka, dan Albert Camus",
+
+  // Random
+  "Apa makanan favoritmu?": `Makanan andalanku adalah ${profileData.preferences.makanan_favorit}.`,
+  "Warna favorit?": `Warna yang paling merepresentasikan diriku adalah ${profileData.preferences.warna_favorit}.`,
+  "Musim apa yang kamu suka?": `Aku menyukai suasana musim ${profileData.preferences.musim_favorit.join(" dan ")}.`,
+  "Sebutkan dua kata favoritmu": `Dua kata yang sangat aku suka: "${profileData.keywords.join('" dan "')}".`
+};
+
+const fallbackAnswers = {
+  sekolah: "Aku sekolah di SMK Wirabuana 2, jurusan RPL.",
+  filosofi: profileData.personal.filosofi,
+  fallback: "Pertanyaan menarik. Data spesifik itu belum ada di sistemku, coba tanyakan hal lain atau pilih dari menu kategori.",
+  unknownFollowup: "Maaf, belum ada data detailnya. Kamu bisa tanyakan topik lain."
+};
+
+const categories = [
+  {
+    id: "personal",
+    label: "Personal",
+    templates: [
+      "Di sekolah mana kamu belajar?",
+      "Jurusan apa yang kamu ambil di sekolah?",
+      "Kamu anak keberapa?",
+      "Kamu tinggal di mana sekarang?",
+      "Kapan dan dimana kamu lahir?"
+    ]
+  },
+  {
+    id: "hobi",
+    label: "Hobi & Lifestyle",
+    templates: [
+      "Olahraga apa yang kamu tekuni?",
+      "Genre musik favoritmu apa?",
+      "Hewan peliharaan yang kamu suka?",
+      "Game apa yang kamu mainkan?",
+      "Siapa artis favoritmu?"
+    ]
+  },
+  {
+    id: "interest",
+    label: "Interest (Astronomi & Politik)",
+    templates: [
+      "Topik apa saja yang kamu minati?",
+      "Kenapa tertarik dengan astronomi?",
+      "Apa pandanganmu soal politik secara umum?",
+      "Suka bahas religi juga?"
+    ]
+  },
+  {
+    id: "psikologi",
+    label: "Psikologi",
+    templates: [
+      "Kenapa kamu tertarik pada psikologi?",
+      "Apa fokus utama penelitian psikologimu?",
+      "Apa itu psikoanalisis menurutmu?",
+      "Apa yang dimaksud dengan kepribadian dalam konteksmu?",
+      "Bagaimana perspektif kognitif menjelaskan perilaku?"
+    ]
+  },
+  {
+    id: "filosofi",
+    label: "Filosofi",
+    templates: [
+      "Apa filosofi hidupmu?",
+      "Bagaimana eksistensialisme mempengaruhi cara berpikirmu?",
+      "Pernah membaca filsuf tertentu?"
+    ]
+  },
+  {
+    id: "random",
+    label: "Random Q&A",
+    templates: [
+      "Apa makanan favoritmu?",
+      "Warna favorit?",
+      "Musim apa yang kamu suka?",
+      "Sebutkan dua kata favoritmu"
+    ]
+  }
+];
+
+const chatButton = document.getElementById('chatButton');
+const chatPanel = document.getElementById('chatPanel');
+const chatMessages = document.getElementById('chatMessages');
+const chatInput = document.getElementById('chatInput');
+const sendBtn = document.getElementById('sendBtn');
+const categoriesList = document.getElementById('categoriesList');
+const templatesArea = document.getElementById('templatesArea');
+const templatesList = document.getElementById('templatesList');
+const menuArea = document.getElementById('menuArea');
+const viewMoreBtn = document.getElementById('viewMoreBtn');
+const toMainBtn = document.getElementById('toMainBtn');
+const backBtn = document.getElementById('backBtn');
+const researchBtn = document.getElementById('researchBtn');
+const categoryTitle = document.getElementById('categoryTitle');
+const closeBtn = document.getElementById('closeBtn');
+const miniIcon = document.getElementById('miniIcon');
+const botIcon = document.getElementById('botIcon');
+
+// UBAH MENJADI:
+miniIcon.src = "assets/boticon.png"; // Gambar kecil di header chat
+botIcon.src = "assets/boticon.png";  // Gambar tombol bulat floating
+
+let panelOpen = false;
+let currentCategory = null;
+let showingAllTemplates = false;
+
+function appendMessage(question, answer){
+  const div = document.createElement('div');
+  div.className = 'msg';
+  div.innerHTML = `<div class="q"><span>Q:</span> ${escapeHtml(question)}</div>
+                   <div class="a"><strong>A:</strong> ${escapeHtml(answer)}</div>`;
+  chatMessages.appendChild(div);
+  chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+function escapeHtml(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function openPanel(){
+  const isMobile = window.innerWidth <= 600;
+  chatPanel.style.height = isMobile ? "75vh" : "560px";
+  chatPanel.style.opacity = "1";
+  chatPanel.setAttribute('aria-hidden','false');
+  panelOpen = true;
+}
+
+function closePanel(){
+  chatPanel.style.height = "0";
+  chatPanel.style.opacity = "0";
+  chatPanel.setAttribute('aria-hidden','true');
+  panelOpen = false;
+  setTimeout(goToMainMenu, 300); // Reset menu after closing animation
+}
+
+function renderCategories(){
+  categoriesList.innerHTML = "";
+  categories.forEach(cat => {
+    const btn = document.createElement('div');
+    btn.className = 'cat-btn';
+    btn.textContent = cat.label;
+    btn.onclick = () => enterCategory(cat.id);
+    categoriesList.appendChild(btn);
+  });
+}
+renderCategories();
+
+function goToMainMenu(){
+  currentCategory = null;
+  showingAllTemplates = false;
+  menuArea.style.display = 'block';
+  templatesArea.style.display = 'none';
+  backBtn.style.display = 'none';
+  researchBtn.style.display = 'none';
+  viewMoreBtn.style.display = 'none';
+}
+
+function enterCategory(catId){
+  const cat = categories.find(c => c.id===catId); if(!cat) return;
+  currentCategory = cat;
+  menuArea.style.display = 'none';
+  templatesArea.style.display = 'block';
+  templatesList.innerHTML = "";
+  categoryTitle.textContent = cat.label;
+  backBtn.style.display = 'inline-flex';
+  researchBtn.style.display = 'inline-flex';
+  showingAllTemplates = false;
+  renderTemplates();
+}
+
+function renderTemplates(){
+  templatesList.innerHTML = "";
+  const list = currentCategory.templates || [];
+  const limited = showingAllTemplates ? list : list.slice(0,3);
+  limited.forEach(t => {
+    const el = document.createElement('div');
+    el.className = 'tpl';
+    el.textContent = t;
+    // Saat diklik, langsung kirim pertanyaan persis seperti teks template
+    el.onclick = () => { chatInput.value = t; sendMessage(); };
+    templatesList.appendChild(el);
+  });
+  
+  if(list.length > 3){
+    viewMoreBtn.style.display = showingAllTemplates ? 'none' : 'inline-flex';
+    viewMoreBtn.onclick = () => {
+      showingAllTemplates = true; renderTemplates();
+    };
+  } else viewMoreBtn.style.display = 'none';
+}
+
+backBtn.onclick = () => { goToMainMenu(); };
+toMainBtn.onclick = () => { goToMainMenu(); };
+
+researchBtn.onclick = () => {
+  const cat = currentCategory;
+  if(!cat) return;
+  const researchPrompts = {
+    personal: ["Bagaimana lingkungan sekolah memengaruhi kepribadian?", "Apa korelasi jurusan RPL dengan pola pikir logis?"],
+    hobi: ["Analisis pengaruh musik Funk terhadap mood belajar", "Filosofi bela diri Taekwondo dalam kehidupan sehari-hari"],
+    interest: ["Riset: Dampak pemahaman astronomi terhadap ego manusia", "Analisis partisipasi politik gen-Z"],
+    psikologi: ["Hubungan antara shadow (Jung) dan perilaku remaja", "Mekanisme pertahanan ego dalam psikoanalisis"],
+    filosofi: ["Penerapan eksistensialisme di era digital"],
+    random: ["Korelasi antara warna favorit dan karakter seseorang"]
+  };
+  
+  const arr = researchPrompts[cat.id] || ["Topik riset umum..."];
+  templatesList.innerHTML = "";
+  arr.forEach(p => {
+    const el = document.createElement('div');
+    el.className = 'tpl';
+    el.textContent = p;
+    el.onclick = ()=> { chatInput.value = p; sendMessage(); };
+    templatesList.appendChild(el);
+  });
+  viewMoreBtn.style.display = 'none';
+};
+
+function sendMessage(){
+  const raw = chatInput.value.trim();
+  if(!raw) return;
+  const a = generateAnswer(raw);
+  appendMessage(raw, a);
+  chatInput.value = "";
+}
+
+sendBtn.addEventListener('click', sendMessage);
+chatInput.addEventListener('keydown', (e)=> { if(e.key==='Enter') sendMessage(); });
+
+chatButton.addEventListener('click', ()=>{
+  if(panelOpen) closePanel(); else openPanel();
+});
+closeBtn.addEventListener('click', closePanel);
+
+function generateAnswer(raw) {
+  // =========================
+  // 1. Exact match (klik dari template)
+  // =========================
+  if (qaMap && qaMap[raw]) {
+    return qaMap[raw];
+  }
+
+  // =========================
+  // 2. Normalisasi input user
+  // =========================
+  const q = raw
+    .toLowerCase()
+    .replace(/[^\w\s]/gi, "")
+    .trim();
+
+  // =========================
+  // 3. Keyword Rules (1 keyword = 1 jawaban jelas)
+  // =========================
+
+  const rules = [
+    // ===== PERSONAL =====
+    { keys: ["tinggal", "domisili", "rumah"], 
+      answer: "Untuk sekarang aku tinggal di Jakarta." },
+
+    { keys: ["lahir", "ttl", "tanggal lahir"], 
+      answer: "Aku lahir di Bogor, tanggal 15 September." },
+
+    { keys: ["sekolah", "wirabuana", "smk"], 
+      answer: "Aku sekolah di SMK Wirabuana 2." },
+
+    { keys: ["jurusan", "rpl"], 
+      answer: "Aku ambil jurusan RPL (Rekayasa Perangkat Lunak)." },
+
+    { keys: ["anak ke", "bersaudara"], 
+      answer: "Aku anak ke-2 dari 3 bersaudara." },
+
+    // ===== HOBI / PREF =====
+    { keys: ["musik", "genre", "lagu"], 
+      answer: "Aku paling sering dengerin genre Pop dan Funk." },
+
+    { keys: ["olahraga", "taekwondo"], 
+      answer: "Aku menekuni olahraga Taekwondo." },
+
+    { keys: ["hewan", "peliharaan"], 
+      answer: "Aku paling suka kucing." },
+
+    { keys: ["game", "main"], 
+      answer: "Aku main MCGG, COC, dan game puzzle lainnya." },
+
+    { keys: ["artis"], 
+      answer: "Artis favoritku Melly Goeslaw dan Alexander Rybak." },
+
+    { keys: ["band"], 
+      answer: "Band favoritku Back Number, Muse, dan Radiohead." },
+
+    { keys: ["makanan"], 
+      answer: "Aku suka mie ayam yang tampilannya rapi." },
+
+    { keys: ["minuman", "kopi"], 
+      answer: "Minuman favoritku Americano." },
+
+    { keys: ["warna"], 
+      answer: "Warna favoritku navy." },
+
+    // ===== PSIKOLOGI =====
+    { keys: ["psikologi", "kenapa tertarik"], 
+      answer: "Aku ingin mengenali diri sendiri dan memahami manusia lebih dalam." },
+
+    { keys: ["kepribadian"], 
+      answer: "Aku tertarik mengkaji struktur dan dinamika kepribadian." },
+
+    { keys: ["kognitif"], 
+      answer: "Aku tertarik pada cara manusia berpikir dan memproses informasi." },
+
+    { keys: ["neurologi", "otak"], 
+      answer: "Bidang neurologi menarik karena membahas hubungan otak dan perilaku." },
+
+    { keys: ["psikoanalisis"], 
+      answer: "Psikoanalisis membahas konflik bawah sadar manusia." },
+
+    { keys: ["jung", "shadow"], 
+      answer: "Konsep Shadow dari Carl Jung sangat menarik untuk eksplorasi diri." },
+
+    // ===== INTEREST =====
+    { keys: ["astronomi"], 
+      answer: "Aku tertarik astronomi karena memberi perspektif luas tentang alam semesta." },
+
+    { keys: ["politik"], 
+      answer: "Aku tertarik politik untuk memahami pola kekuasaan dan sistem sosial." },
+
+    // ===== FILOSOFI =====
+    { keys: ["filosofi", "filsafat", "eksistensial"], 
+      answer: "Aku condong ke eksistensialisme." },
+
+    // ===== SAPAAN =====
+    { keys: ["halo", "hai", "hi", "pagi", "siang", "malam"], 
+      answer: "Halo! Mau bahas aku atau bidang tertentu? 😄" },
+
+    { keys: ["siapa kamu", "bot"], 
+      answer: "Aku asisten virtual yang bantu jelasin profil Alam." }
+  ];
+
+  // =========================
+  // 4. Matching engine (pintar tapi stabil)
+  // =========================
+  for (let rule of rules) {
+    for (let key of rule.keys) {
+      if (q.includes(key)) {
+        return rule.answer;
+      }
+    }
+  }
+
+  // =========================
+  // 5. Fallback (kalau gak ketemu)
+  // =========================
+  const fallback = [
+    "Aku belum nemu jawaban yang pas buat itu.",
+    "Coba tanya pakai kata yang sedikit beda ya.",
+    "Data itu belum ada di sistem."
+  ]; 
+
+  return fallback[Math.floor(Math.random() * fallback.length)];
+}
+
+
+window.__chatAssistant = {
+  setLogo: (url)=>{ document.getElementById('botIcon').src = url; document.getElementById('miniIcon').src = url; },
+  updateProfile: (obj)=>{ Object.assign(profileData, obj); },
+  open: openPanel,
+  close: closePanel
+};
+
+const panelObserver = new MutationObserver(()=> {
+  if(panelOpen) chatInput.focus();
+});
+panelObserver.observe(chatPanel, { attributes:true });
+
+
+
+</script>
+<script>
+    // ... (Kode script Anda yang lain di sini, seperti navigasi dan partikel) ...
+
+    // --- START: Fungsionalitas Toggle Playlist Card (FINAL FIX) ---
+    const toggleButtons = document.querySelectorAll('.toggle-details-btn');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            
+            // Menghentikan event agar tidak menyebar ke elemen lain
+            e.stopPropagation(); 
+            
+            const card = this.closest('.music-card'); 
+            const isCurrentlyOpen = card.classList.contains('open');
+
+           
+            document.querySelectorAll('.music-card.open').forEach(c => {
+                if (c !== card) {
+                   
+                    // Reset teks tombol
+                    c.querySelector('.toggle-details-btn').textContent = 'Lihat Selengkapnya';
+                }
+            });
+            
+         
+            if (isCurrentlyOpen) {
+               
+                card.classList.remove('open');
+                this.textContent = 'Lihat Selengkapnya';
+            } else {
+              
+                card.classList.add('open');
+                this.textContent = 'Sembunyikan';
+            }
+        });
+    });
+    // --- END: Fungsionalitas Toggle Playlist Card ---
+    
+    // ... (Kode script Chat Assistant Anda di sini) ...
+</script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9a8c053dc03afd64',t:'MTc2NDg1ODgyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
